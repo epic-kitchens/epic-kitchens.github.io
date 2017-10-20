@@ -1,126 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
+---
+title: EPIC Kitchens
+---
 
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-7551853-2");
-      pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
-
-  <style>
-    body {
-      font-family: 'Vollkorn', sans-serif;
-    }
-
-    @media (min-width: 1000px) {
-      body {
-        width: 780px;
-        margin: 0 auto;
-      }
-    }
-    @media (max-width: 800px) {
-      body {
-        width: 100%
-      }
-    }
-
-    .subheading {
-      font-size: 120%;
-    }
-
-    .people h1 {
-      font-size: 1.2em;
-    }
-
-    h2 {
-      clear: left;
-      margin-top: 1em;
-    }
-
-    h3 {
-      clear: left;
-      margin-top: 1em;
-    }
-
-    img {
-      margin-right: 1em;
-      margin-bottom: 3em;
-    }
-
-    p {
-      margin: 0.5em;
-    }
-
-    nav {
-      margin-top: 3em;
-      margin-bottom: 1em;
-    }
-
-    a:visited {color:#006633}
-    a:link {color:#006633}
-    a:hover {color: #FF0000}
-
-    h1,h2,h3{
-      color:#006633
-    }
-  </style>
-  <title>EPIC-KITCHENS 2018 Dataset</title>
-  <link rel="stylesheet" href="simple.css">
-
-</head>
-
-<body>
-  <h1>EPIC-KITCHENS 2018<br/>COMING SOON....</h1>
-  <h2>Exp. Date: Mar 2018</h2>
-
-  <section class="people">
-  <h1>Principal Investigator:</h1>
-    <b><a href="http://www.cs.bris.ac.uk/~damen">Dima Damen</a>, University of Bristol, UK</b><br/>
-    <br/>
-
-    <h1>Co-Investigators:</h1>
-    <a href="http://www.cs.utoronto.ca/~fidler/">Sanja Fidler</a>, University of Toronto, Canada<br/><br/>
-    <a href="http://www.dmi.unict.it/farinella/">Giovanni Maria Farinella</a>, University of Catania, Italy<br/>
-    <br/>
-
-    <h1>Lead Researchers:</h1>
-    <table style="border: 0">
-        <tr><td><a href="http://www.davidemoltisanti.com/research">Davide Moltisanti</a></td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td><a href="https://mwray.github.io/">Michael Wray</a></td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td>Hazel Doughty</td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td>Toby Perrett</td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td><a href="http://iplab.dmi.unict.it/furnari/">Antonino Furnari</a></td><td>University of Catania, Italy</td><td>(Jul 2017 - )</td></tr>
-        <tr><td>Jonathan Munro</td><td>University of Bristol, UK</td><td>(Sep 2017 - )</td></tr>
-        <tr><td>Evangelos Kazakos</td><td>University of Bristol, UK</td><td>(Sep 2017 - )</td></tr>
-        <tr><td><a href="http://willprice.org">Will Price</a></td><td>University of Bristol, UK</td><td>(Oct 2017 - )</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h1>Updates</h1>
-      <p>
-      For updates on epic-kitchens2018, as well as the EPIC (Egocentric Perception,
-      Interaction and Computing) workshop series, jobs, code and related datasets,
-      join the <b>epic-community mailing list</b>
-      </p>
-
-      Instructions:
-      <ul>
-        <li>send an email to: <a href="mailto:sympa@sympa.bristol.ac.uk">sympa@sympa.bristol.ac.uk</a></li>
-        <li>with the subject: <b>subscribe epic-community</b></li>
-        <li>and blank message content</li>
-      </ul>
-
-    <h1>Contact Details</h2>
-    <p>For general enquiries, email us at
-      <a href="mailto:uob-epic-kitchens2018@bristol.ac.uk">uob-epic-kitchens2018@bristol.ac.uk</a></p>
-</section>
-
-  </body>
-</html>
+{% capture url_current_year %}{{ site.url }}/{{ site.year }}{% endcapture %}
+<!DOCTYPE HTML>
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1; url={{ url_current_year }}">
+        <script type="text/javascript">
+          window.location.href = "{{ url_current_year }}"
+        </script>
+        <title>Redirecting to EPIC Kitchens {{ site.year }}</title>
+    </head>
+    <body>
+      If you are not redirected automatically, follow this <a href="{{ url_current_year }}">EPIC Kitchens {{ site.year }}</a>.
+    </body>
+  </html>
