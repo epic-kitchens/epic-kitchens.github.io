@@ -20,7 +20,7 @@ Start development server
 $ bundle exec jekyll serve
 ```
 
-Open up http://localhost:4000/website
+Open up http://localhost:4000/
 
 (replace website with whatever `baseurl` is set to in `_config.yml`)
 
