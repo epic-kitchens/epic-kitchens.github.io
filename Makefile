@@ -9,7 +9,7 @@ serve: vendor
 	bundle exec jekyll serve
 
 vendor:
-	bundle install
+	bundle install --path vendor/bundle
 
 vnu.jar:
 	curl -Lf "https://github.com/validator/validator/releases/download/17.9.0/vnu.jar_17.9.0.zip" -o vnu.jar.zip
