@@ -18,8 +18,8 @@ year: 2018
 email: uob-epic-kitchens2018@bristol.ac.uk
 description: >-
   EPIC Kitchens
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://epic-kitchens.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/website" # the subpath of your site, e.g. /blog
+url: "http://uob-epic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
 github_username: ""
 
@@ -27,16 +27,16 @@ github_username: ""
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

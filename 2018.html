@@ -1,125 +1,410 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
+---
+title: "EPIC-KITCHENS 2018 Dataset"
+layout: default
+---
 
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-7551853-2");
-      pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
+<!-- About -->
+<section class="bg-light" id="about">
+  <div class="container">
 
-  <style>
-    body {
-      font-family: 'Vollkorn', sans-serif;
-    }
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading text-uppercase">News</h2>
+        <h5 class="text-muted" style="text-align:left;">
+          <ul>
+              <li>EPIC-Kitchens scheduled release date: 9th of April 2018!!!</li>
+              <li>Watch <a href="https://youtu.be/Dj6Y3H0ubDw" target="_blank">YouTube Release Trailer here</a></li>
+          </ul>
+        </h5>
+      </div>
+    </div>
 
-    @media (min-width: 1000px) {
-      body {
-        width: 780px;
-        margin: 0 auto;
-      }
-    }
-    @media (max-width: 800px) {
-      body {
-        width: 100%
-      }
-    }
+    <div class="row">
+      <!-- news column -->
+      <div class="col-md-4">
+        <h4 class="service-heading">What is EPIC-Kitchens?</h4>
+        <p class="text-muted">The <b>largest dataset in first-person (egocentric) vision</b>; multi-faceted <b>non-scripted</b> recordings in native environments - i.e. the wearers' homes, capturing all daily activities in the kitchen over multiple days. Annotations are collected using a novel `live' audio commentary approach.</p>
+      </div>
+      <!-- characteristics column -->
+      <div class="col-md-4">
+        <h4 class="service-heading">Characteristics</h4>
+        <ul class="text-muted">
+            <li class="text-muted">32 kitchens - 4 cities</li>
+            <li class="text-muted">Head-mounted camera</li>
+            <li class="text-muted">55 hours of recording - Full HD, 60fps</li>
+            <li class="text-muted">11.5M frames</li>
+            <li class="text-muted">Multi-language narrations</li>
+            <li class="text-muted">39,594 action segments</li>
+            <li class="text-muted">454,158 object bounding boxes</li>
+            <li class="text-muted">125 verb classes, 331 noun classes</li>
+        </ul>
+      </div>
+      <!-- udated column -->
+      <div class="col-md-4">
+        <h4 class="service-heading">Updates</h4>
+        <p class="text-muted">Stay tuned with updates on epic-kitchens2018, as well as EPIC workshop series by
+          joining the <strong>epic-community mailing list</strong>
+          send an email to:
+          <a href="mailto:sympa@sympa.bristol.ac.uk?subject=subscribe%20epic-community">
+            sympa@sympa.bristol.ac.uk
+          </a>
+          with the subject <em>subscribe epic-community</em> and a
+          <em>blank</em> message body.
+        </p>
+      </div>
+    </div>
+    <!-- video banner row -->
+    <div class="row">
+      <div class="col-lg-12">
+        <video  autoplay muted loop id="myVideo" width="100%">
+          <source src="{{ site.baseurl }}/static/videos/04x04_vp9.webm" type="video/webm">
+          <source src="{{ site.baseurl }}/static/videos/04x04_h264_720.mp4" type="video/mp4">
+          <source src="{{ site.baseurl }}/static/videos/04x04_h265_720.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
-    .subheading {
-      font-size: 120%;
-    }
-
-    .people h1 {
-      font-size: 1.2em;
-    }
-
-    h2 {
-      clear: left;
-      margin-top: 1em;
-    }
-
-    h3 {
-      clear: left;
-      margin-top: 1em;
-    }
-
-    img {
-      margin-right: 1em;
-      margin-bottom: 3em;
-    }
-
-    p {
-      margin: 0.5em;
-    }
-
-    nav {
-      margin-top: 3em;
-      margin-bottom: 1em;
-    }
-
-    a:visited {color:#006633}
-    a:link {color:#006633}
-    a:hover {color: #FF0000}
-
-    h1,h2,h3{
-      color:#006633
-    }
-  </style>
-  <title>EPIC-KITCHENS 2018 Dataset</title>
-</head>
-
-<body>
-  <h1>EPIC-KITCHENS 2018<br/>COMING SOON....</h1>
-  <h3>Exp. Date: Mar 2018</h3>
-
-    <br/>
-  <section class="people">
-  <h1>Principal Investigator:</h1>
-    <a href="http://www.cs.bris.ac.uk/~damen">Dima Damen</a>, University of Bristol, UK<br/>
-    <br/>
-
-    <h1>Co-Investigators:</h1>
-    <a href="http://www.cs.utoronto.ca/~fidler/">Sanja Fidler</a>, University of Toronto, Canada<br/><br/>
-    <a href="http://www.dmi.unict.it/farinella/">Giovanni Maria Farinella</a>, University of Catania, Italy<br/>
-    <br/>
-
-    <h1>Lead Researchers:</h1>
-    <table style="border: 0">
-        <tr><td><a href="http://www.davidemoltisanti.com/research">Davide Moltisanti</a></td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td><a href="https://mwray.github.io/">Michael Wray</a></td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td>Hazel Doughty</td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td>Toby Perrett</td><td>University of Bristol, UK</td><td>(Apr 2017 - )</td></tr>
-        <tr><td><a href="http://iplab.dmi.unict.it/furnari/">Antonino Furnari</a></td><td>University of Catania, Italy</td><td>(Jul 2017 - )</td></tr>
-        <tr><td>Jonathan Munro</td><td>University of Bristol, UK</td><td>(Sep 2017 - )</td></tr>
-        <tr><td>Evangelos Kazakos</td><td>University of Bristol, UK</td><td>(Sep 2017 - )</td></tr>
-        <tr><td><a href="http://willprice.org">Will Price</a></td><td>University of Bristol, UK</td><td>(Oct 2017 - )</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h1>Updates</h1>
-      <p>
-      For updates on epic-kitchens2018, as well as the EPIC (Egocentric Perception,
-      Interaction and Computing) workshop series, jobs, code and related datasets,
-      join the <b>epic-community mailing list</b>
-      </p>
-
-      Instructions:
-      <ul>
-        <li>send an email to: <a href="mailto:sympa@sympa.bristol.ac.uk">sympa@sympa.bristol.ac.uk</a></li>
-        <li>with the subject: <b>subscribe epic-community</b></li>
-        <li>and blank message content</li>
-      </ul>
-
-    <h1>Contact Details</h2>
-    <p>For general enquiries, email us at
-      <a href="mailto:uob-epic-kitchens2018@bristol.ac.uk">uob-epic-kitchens2018@bristol.ac.uk</a></p>
+  </div>
 </section>
 
-  </body>
-</html>
+<!-- Stats -->
+<section id="stats">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">EPIC-Kitchens Stats</h2>
+        <h3 class="section-subheading text-muted">Some graphical representations of our dataset and annotations</h3>
+      </div>
+    </div>
+    <!-- to add graphs follow below example -->
+    <div class="row justify-content-md-center text-center">
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <img src="./stas-figures/timeOfDay.png" style="width: 100%" class="img-responsive"/> 
+        <h4>Time Of Day</h4>
+      </div>
+      <div class="col-md-4 centered" style="padding:1rem; vertical-align:bottom">
+        <!-- TO ADD GRAPH: replace div below, ex: above <img> tag -->
+        <img src="./stas-figures/pie.png" style="width: 100%" class="img-responsive"/>  
+        <h4>Activities</h4>
+      </div>
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <img src="./stas-figures/Wordle-min.png" style="width: 100%" class="img-responsive"/>  
+        <h4>Wordle of annotations</h4>
+      </div>
+    </div>
+      
+      
+     <div class="row justify-content-md-center text-center">
+      <div class="col-md centered" style="padding:1rem;">
+        <img src="./stas-figures/verb_stats.png" style="width: 100%" class="img-responsive"/> 
+      </div>
+    </div>
+      
+      <div class="row justify-content-md-center text-center">
+      <div class="col-md centered" style="padding:1rem;">
+        <img src="./stas-figures/nouns-stats.png" style="width: 100%" class="img-responsive"/> 
+      </div>
+    </div>
+
+   <!-- <div class="row justify-content-md-center text-center">
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <div id="graph4" style="width: 100%" class="img-responsive"></div>
+        <h4>Resolution</h4>
+      </div>
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <div id="graph5" style="width: 100%" class="img-responsive"></div>
+        <h4>Number of Frames</h4>
+      </div>
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <div id="graph6" style="width: 100%" class="img-responsive"></div>
+        <h4>Total number of hours</h4>
+      </div>
+    </div>
+    <div class="row justify-content-md-center text-center">
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <div id="graph7" style="width: 100%" class="img-responsive"></div>
+        <h4>Number of annotators</br>used per video</h4>
+      </div>
+      <div class="col-md-4 centered" style="padding:1rem;">
+        <div id="graph8" style="width: 100%" class="img-responsive"></div>
+        <h4>Splits</h4>
+      </div>
+    </div> -->
+
+    <!-- <div class="col-md-6">
+      <div class="card" style="border: solid 2px; background-color: #373435ff; margin-bottom:5px;">
+        <h1 style=" color: white; text-decoration: underline; text-decoration-color: #ed323eff;"> Baseline Models </h1>
+        <div id="graph9"></div>
+      </div>
+
+      <div class="card" style="border: solid 2px; background-color: #ed323eff;">
+        <h1 style=" color: white; text-decoration: underline; text-decoration-color: #373435ff;"> State of the Art Results </h1>
+        <div id="graph10"></div>
+      </div>
+
+    </div> -->
+  </div>
+</section>
+
+<section class="bg-light" id="downloads">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading text-uppercase">Download</h2>
+        <h3 class="section-subheading text-muted">Dataset publicly available for research purposes</h3>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12">
+        <h4 class="section-subheading">Publication(s)</h4>
+          <p>Cite the following paper (soon on ArXiv):</p>
+            <pre class="bibtex"><code>@article{Damen2018EPICKITCHENS,
+   title={Scaling Egocentric Vision: The EPIC-KITCHENS Dataset},
+   author={Damen, Dima and Doughty, Hazel and Fidler, Sanja and Furnari, Antonino and 
+           Kazakos, Evangelos and Maria Farinella, Giovanni and Moltisanti, Davide and 
+           Munro, Jonathan and Perrett, Toby and Price, Will and Wray, Michael},
+   journal={arXiv},
+   year={2018}
+} </code></pre>
+          <h4 class="section-subheading">Sequences and Annotations</h4>
+        <p>
+          Sequences: Available soon...<br/>
+          Annotations: Available soon at <a href="https://github.com/epic-kitchens/annotations">GitHub Repo epic-kitchens/annotations</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="section-subheading">Copyright <img alt="Creative Commons License" style="border-width:1px;float:left;margin-right:15px;margin-bottom:0px;" src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png"/></h4>
+        <p>
+          All datasets and benchmarks on this page are copyright by us and published under the <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International</a> License. This means that  you must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not use the material for commercial purposes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Challenges -->
+<section id="challenges">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading text-uppercase">Challenges</h2>
+        <h3 class="section-subheading text-muted">Details of challenges and leaderboard --- available soon</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <h4 class="subheading">Object-Detection Challenge</h4>
+
+        <p class="text-muted">Detect and localise the 300-object classes</p>
+          
+          <div class="row justify-content-md-center text-center">
+      <div class="col-md centered" style="padding:1rem;">
+        <img src="./stas-figures/challenge1.png" style="width: 100%" class="img-responsive"/> 
+      </div>
+    </div>
+
+        <h4 class="subheading">Action-Recognition Challenge</h4>
+
+        <p class="text-muted">Classify action segments</p>
+          
+          <div class="row justify-content-md-center text-center">
+      <div class="col-md centered" style="padding:1rem;">
+        <img src="./stas-figures/challenge2.png" style="width: 100%" class="img-responsive"/> 
+      </div>
+    </div>
+
+        <h4 class="subheading">Action-Anticipation Challenge</h4>
+
+        <p class="text-muted">Predict the next action in the sequence</p>
+          
+          <div class="row justify-content-md-center text-center">
+      <div class="col-md centered" style="padding:1rem;">
+        <img src="./stas-figures/challenge3.png" style="width: 100%" class="img-responsive"/> 
+      </div>
+    </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+<section class="bg-light" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading text-uppercase">The Team</h2>
+        <div class="text-muted">
+          <p> We are a group of researchers working in computer vision
+            from the <a href="http://www.cs.bris.ac.uk/">University
+              of Bristol</a>, <a href="http://web.cs.toronto.edu/">University of
+              Toronto</a>, and <a href="http://www.unict.it/">University of
+              Catania</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <a href="http://www.bristol.ac.uk/">
+          <img src="{{ site.baseurl }}/static/img/universities/bristol-min.png" alt="" style="width:90%; margin-top:15px; margin-bottom:15px;">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.utoronto.ca/">
+          <img src="{{ site.baseurl }}/static/img/universities/toronto-min.png" alt="" style="width:90%; margin-bottom:5px;">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.unict.it/en/">
+          <img src="{{ site.baseurl }}/static/img/universities/catania-min.png" alt="" style="width:90%; margin-bottom:5px;">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="team-member">
+          <a href="http://www.cs.bris.ac.uk/~damen">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/dd-min.jpg"/>
+          
+          <h4>Dima Damen</h4></a>
+          <h5>Principal Investigator</h5>
+          <h6 class="text-muted">University of Bristol<br/>United Kingom</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="team-member">
+          <a href="http://www.cs.utoronto.ca/~fidler/">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/sanja-min.jpg" />
+          
+          <h4>Sanja Fidler</h4></a>
+          <h5>Co-Investigator</h5>
+          <h6 class="text-muted">University of Toronto<br/>Canada</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="team-member">
+          <a href="http://www.dmi.unict.it/farinella/">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/gmf-min.jpg" />
+          
+          <h4>Giovanni Maria Farinella</h4></a>
+          <h5>Co-Investigator</h5>
+          <h6 class="text-muted">University of Catania<br/>Italy</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="http://www.davidemoltisanti.com/research">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/dm-min.jpg" />
+          
+          <h4>Davide Moltisanti</h4></a>
+          <h5>(Apr 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="https://mwray.github.io/">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/mw-min.jpg" />
+          
+              <h4>Michael Wray</h4></a>
+          <h5>(Apr 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="http://hazeldoughty.github.io">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/hd-min.jpg" />
+          
+              <h4>Hazel Doughty</h4></a>
+          <h5>(Apr 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/tp-min.jpg" />
+          </a>
+          <h4>Toby Perrett</h4>
+          <h5>(Apr 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="http://iplab.dmi.unict.it/furnari/">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/af-min.jpg" />
+          
+          <h4>Antonino Furnari</h4></a>
+          <h5>(Jul 2017 - )</h5>
+          <h6 class="text-muted">University of Catania</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/jm-min.jpg" />
+          </a>
+          <h4>Jonathan Munro</h4>
+          <h5>(Sep 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/vk-min.jpg" />
+          </a>
+          <h4>Evangelos Kazakos</h4>
+          <h5>(Sep 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="http://willprice.org">
+            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/wp-min.jpg" />
+          
+          <h4>Will Price</h4></a>
+          <h5>(Oct 2017 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading text-uppercase">Sponsors</h2>
+        <div class="text-muted">
+          <p> The dataset is sponsored by...
+              <ul class="text-muted">
+                  <li><a href="https://www.nokia.com/en_int/nokia-technologies">Nokia Technologies</a> - Charitable Donation</li>
+                  <li><a href="http://www.bristol.ac.uk/golding/">Jean Golding Institute, University of Bristol</a> - Seed corn funding</li>
+              </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script src="{{site.baseurl}}/static/js/stats.js"></script>
