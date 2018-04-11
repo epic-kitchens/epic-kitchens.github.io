@@ -8,15 +8,15 @@ p {
 }
 
 a {
-  color: #ed323eff;
+  color: #ed323e;
 }
 
 a:hover {
-  color: #ed323eff;
+  color: #ed323e;
 }
 
 .text-primary {
-  color: #ed323eff !important;
+  color: #ed323e !important;
 }
 
 h1,
@@ -64,13 +64,13 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #ed323eff;
-  border-color: #ed323eff;
+  background-color: #ed323e;
+  border-color: #ed323e;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #ed323eff !important;
-  border-color: #ed323eff !important;
+  background-color: rgb(237,50,35) !important;
+  border-color: rgb(237,50,35) !important;
   color: white;
 }
 
@@ -79,12 +79,12 @@ section h3.section-subheading {
 }
 
 ::-moz-selection {
-  background: #ed323eff;
+  background: #ed323e;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ed323eff;
+  background: #ed323e;
   text-shadow: none;
 }
 
@@ -97,7 +97,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #373435ff;
+  background-color: #373435;
 }
 
 #mainNav .navbar-toggler {
@@ -107,12 +107,12 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #373435ff;
+  background-color: rgb(55,52,53);
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-  color: #ed323eff;
+  color: #ed323e;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
@@ -130,7 +130,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ed323eff;
+  color: #ed323e;
 }
 
 @media (min-width: 992px) {
@@ -449,7 +449,7 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #ed323eff;
+  background-color: #ed323e;
 }
 
 .timeline > li .timeline-image h4 {
@@ -620,7 +620,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-  border-color: #ed323eff;
+  border-color: #ed323e;
   box-shadow: none;
 }
 
@@ -690,7 +690,7 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #ed323eff;
+  background-color: #ed323e;
 }
 
 .bibtex {
