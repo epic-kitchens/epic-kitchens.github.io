@@ -159,12 +159,7 @@ layout: default
       <div class="row">
       <div class="col-md-12">
         <h4 class="section-subheading">Publication(s)</h4>
-          <p>Cite the following paper(
-          <a href="https://arxiv.org/abs/1804.02748"
-             onclick="trackOutboundLink('http://arxiv.org'); return false;">
-            available now on Arxiv
-          </a>
-          ):</p>
+          <p>Cite the following paper (<a href="https://arxiv.org/abs/1804.02748">available now on Arxiv</a>):</p>
             <pre class="bibtex"><code>@article{Damen2018EPICKITCHENS,
    title={Scaling Egocentric Vision: The EPIC-KITCHENS Dataset},
    author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria  and Fidler, Sanja and 
@@ -175,33 +170,10 @@ layout: default
 } </code></pre>
           <h4 class="section-subheading">Sequences and Annotations</h4>
         <p>
-          Sequences: Available at <a
-            href="http://dx.doi.org/10.5523/bris.3h91syskeag572hl6tvuovwv4d"
-            onclick="trackOutboundLink('http://data.bris.ac.uk'); return false;">
-            Data.Bris servers (1TB zipped)
-          </a><br/> &nbsp;&nbsp;&nbsp;&nbsp; 
-          To download parts of the dataset, we provide three scripts for
-          downloading the 
-          <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_videos.sh"
-             onclick="trackOutboundLink('http://github.com'); return false;">
-            videos
-          </a>,
-          <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_frames_rgb_flow.sh"
-             onclick="trackOutboundLink('http://github.com'); return false;">
-            frames
-          </a>
-          or 
-          <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_object_detection_images.sh"
-             onclick="trackOutboundLink('http://github.com'); return false;">
-            object annotation images
-          </a> separately.<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp; Note: These scripts will work for
-          Linux and Mac. For Windows users a bash installation should
-          work.<br/> Annotations: Available at 
-          <a href="https://github.com/epic-kitchens/annotations"
-             onclick="trackOutboundLink('http://github.com'); return false;">
-             GitHub epic-kitchens/annotations
-          </a>
+          Sequences: Available at <a href="http://dx.doi.org/10.5523/bris.3h91syskeag572hl6tvuovwv4d">Data.Bris servers (1TB zipped)</a><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp; To download parts of the dataset, we provide three scripts for downloading the <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_videos.sh">videos</a>, <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_frames_rgb_flow.sh">frames</a> or <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_object_detection_images.sh">object annotation images</a> separately.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; Note: These scripts will work for Linux and Mac. For Windows users a bash installation should work.<br/>
+          Annotations: Available soon at <a href="https://github.com/epic-kitchens/annotations">GitHub Repo epic-kitchens/annotations</a>
         </p>
       </div>
     </div>
@@ -440,17 +412,3 @@ layout: default
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script src="{{site.baseurl}}/static/js/stats.js"></script>
-<script>
-/**
-* Function that tracks a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-var trackOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
-   });
-}
-</script> 
