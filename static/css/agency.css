@@ -12,7 +12,8 @@ a {
 }
 
 a:hover {
-  color: #ed323e;
+  color: #00b6d6;
+  text-decoration: none;
 }
 
 .text-primary {
@@ -78,15 +79,15 @@ section h3.section-subheading {
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
-::-moz-selection {
-  background: #ed323e;
+::-moz-selection, ::selection  {
+  background: #00b6d6;
   text-shadow: none;
 }
 
-::selection {
-  background: #ed323e;
-  text-shadow: none;
+.text-muted::-moz-selection, .text-muted::selection  {
+  color: white;
 }
+
 
 img::selection {
   background: transparent;
