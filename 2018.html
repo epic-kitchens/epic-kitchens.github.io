@@ -161,9 +161,27 @@ layout: default
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h4 class="section-subheading">Publication(s)</h4>
-        <p>Cite the following paper (<a href="https://arxiv.org/abs/1804.02748">available now on Arxiv</a>):</p>
-        <pre class="bibtex"><code>@INPROCEEDINGS{Damen2018EPICKITCHENS,
+        <h4 class="section-subheading">Sequences and Annotations</h4>
+        <p>
+          Sequences: Available at <a href="http://dx.doi.org/10.5523/bris.3h91syskeag572hl6tvuovwv4d">Data.Bris servers (1TB zipped)</a>
+        </p>
+        <p>
+          To download parts of the dataset, we provide three scripts for downloading the 
+          <ul>
+            <li><a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_videos.sh">videos</a></li>
+            <li><a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_frames_rgb_flow.sh">frames</a></li> 
+            <li><a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_object_detection_images.sh">object annotation images</a> separately<@s`
+        </p>
+        <aside>
+        Note: These scripts will work for Linux and Mac. For Windows users a bash installation should work.<br/>
+        Annotations: Available at <a href="https://github.com/epic-kitchens/annotations">GitHub Repo epic-kitchens/annotations</a>
+        </aside>
+        <section>
+          <h4 class="section-subheading">Publication(s)</h4>
+          <p>Cite the following paper 
+            (<a href="https://arxiv.org/abs/1804.02748">available now on Arxiv</a> and 
+            <a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Dima_Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html">the CVF</a>):</p>
+          <pre class="bibtex"><code>@INPROCEEDINGS{Damen2018EPICKITCHENS,
    title={Scaling Egocentric Vision: The EPIC-KITCHENS Dataset},
    author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria  and Fidler, Sanja and 
            Furnari, Antonino and Kazakos, Evangelos and Moltisanti, Davide and Munro, Jonathan 
@@ -171,13 +189,7 @@ layout: default
    booktitle={European Conference on Computer Vision (ECCV)},
    year={2018}
 } </code></pre>
-        <h4 class="section-subheading">Sequences and Annotations</h4>
-        <p>
-          Sequences: Available at <a href="http://dx.doi.org/10.5523/bris.3h91syskeag572hl6tvuovwv4d">Data.Bris servers (1TB zipped)</a><br/>
-          &nbsp;&nbsp;&nbsp;&nbsp; To download parts of the dataset, we provide three scripts for downloading the <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_videos.sh">videos</a>, <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_frames_rgb_flow.sh">frames</a> or <a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_object_detection_images.sh">object annotation images</a> separately.<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp; Note: These scripts will work for Linux and Mac. For Windows users a bash installation should work.<br/>
-          Annotations: Available at <a href="https://github.com/epic-kitchens/annotations">GitHub Repo epic-kitchens/annotations</a>
-        </p>
+        </section>
       </div>
     </div>
 
@@ -198,70 +210,154 @@ layout: default
     <div class="row">
       <div class="col-md-12 text-center">
         <h2 class="section-heading text-uppercase">Challenges</h2>
-        <h3 class="section-subheading text-muted">Details of challenges and leaderboard --- available soon</h3>
+        <h3 class="section-subheading text-muted">Challenge and Leaderboard Details</h3>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-
-        <div id="challenge-object-detection">
-          <h4 class="subheading"><a href="https://competitions.codalab.org/competitions/20111">Object-Detection Challenge</a></h4>
-
-          <div class="row justify-content-md-center text-center">
-            <div class="col-md centered" style="padding:1rem;">
-              <img src="{{ site.baseurl }}/static/img/stats-figures/challenge1.png" style="width: 100%" class="img-responsive"/> 
-            </div>
-          </div>
-
-          <p class="text-muted">Detect and localise the 300-object classes</p>
-
-          <h5 class="subheading">Resources</h5>
-          <ul class="text-muted">
-            <li>Submit your results on <a href="https://competitions.codalab.org/competitions/20111">CodaLab website</a></li>
-            <li>Learn about the <a href="https://competitions.codalab.org/competitions/20111#learn_the_details-submission-format">submission format details</a></li>
-          </ul>
-        </div>
-
-        <div id="challenge-action-recognition">
-          <div class="row justify-content-md-center text-center">
-            <div class="col-md centered" style="padding:1rem;">
-              <img src="{{ site.baseurl }}/static/img/stats-figures/challenge2.png" style="width: 100%" class="img-responsive"/> 
-            </div>
-          </div>
-
+    <section class="challenge" id="challenge-action-recognition">
+      <div class="row">
+        <div class="col-md-12">
           <h4 class="subheading"><a href="https://competitions.codalab.org/competitions/20115">Action-Recognition Challenge</a></h4>
-
-          <p class="text-muted">Classify trimmed action segments by verb and noun class (and optionally action class)</p>
-
-          <h5 class="subheading">Resources</h5>
-          <ul class="text-muted">
-            <li>Submit your results on <a href="https://competitions.codalab.org/competitions/20115">CodaLab website</a></li>
-            <li>Get going with the <a href="https://github.com/epic-kitchens/starter-kit-action-recognition">starter pack</a></li>
-            <li>Learn about the <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a></li>
-          </ul>
-        </div>
-
-        <div id="challenge-action-recognition">
-          <div class="row justify-content-md-center text-center">
-            <div class="col-md centered" style="padding:1rem;">
-              <img src="{{ site.baseurl }}/static/img/stats-figures/challenge3.png" style="width: 100%" class="img-responsive"/> 
-            </div>
-          </div>
-
-          <h4 class="subheading"><a href="https://competitions.codalab.org/competitions/20071">Action-Anticipation Challenge</a></h4>
-
-          <p class="text-muted">Predict the next action in the sequence</p>
-
-          <h5 class="subheading">Resources</h5>
-          <ul class="text-muted">
-            <li>Submit your results on <a href="https://competitions.codalab.org/competitions/20071">CodaLab website</a></li>
-            <li>Get going with the <a href="https://github.com/epic-kitchens/starter-kit-action-recognition">starter pack</a></li>
-            <li>Learn about the <a href="https://competitions.codalab.org/competitions/20071#learn_the_details-submission-format">submission format details</a></li>
-          </ul>
+          <p class="text-muted">
+            Given a trimmed action segment, the challenge is to classify the
+            segment into its action class composed of the pair of verb and noun
+            classes. To participate in this challenge, predictions for all
+            segments in the seen (S1) and unseen (S2) test sets should be
+            provided. For each test segment we require the confidence scores
+            for each verb and noun class.
+          </p>
         </div>
       </div>
-    </div>
+
+
+      <div class="details row text-center">
+        <div class="col-md">
+          <a href="https://github.com/epic-kitchens/starter-kit-action-recognition">
+            <i class="text-center centered fas fa-4x fa-seedling"></i>
+          </a>
+          <br />
+          <p class="text-muted">Get started with the 
+            <a href="https://github.com/epic-kitchens/starter-kit-action-recognition">starter pack</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+            <i class="text-center centered fas fa-4x fa-info"></i>
+          </a>
+          <br />
+          <p class="text-muted">Learn about the 
+            <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <a href="https://competitions.codalab.org/competitions/20115#results">
+            <i class="text-center centered fas fa-4x fa-trophy"></i>
+          </a>
+          <p class="text-muted">Submit your results on 
+            <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+          </p>
+        </div>
+      </div>
+      <figure class="text-muted">
+        <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+        <img src="{{ site.baseurl }}/static/img/stats-figures/challenge2.png" style="width: 100%" class="img-responsive"/> 
+      </figure>
+    </section>
+
+
+    <section class="challenge" id="challenge-action-anticipation">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="subheading">
+            <a href="https://competitions.codalab.org/competitions/20071">Action-Anticipation Challenge</a>
+          </h4>
+          <p class="text-muted">
+            Given an anticipation time, set to 1s before the action starts, the
+            challenge is to classify the future action into its action class
+            composed of the pair of verb and noun classes. To participate in
+            this challenge, predictions for all segments in the seen (S1) and
+            unseen (S2) test sets should be provided. For each test segment we
+            require the confidence scores for each verb and noun class.
+          </p>
+        </div>
+      </div>
+
+      <div class="details row text-center">
+        <div class="col-md">
+          <a href="https://github.com/epic-kitchens/starter-kit-action-recognition">
+            <i class="text-center centered fas fa-4x fa-seedling"></i>
+          </a>
+          <br />
+          <p class="text-muted">Get started with the 
+            <a href="https://github.com/epic-kitchens/starter-kit-action-recognition">starter pack</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <a href="https://competitions.codalab.org/competitions/20071#learn_the_details-submission-format">
+            <i class="text-center centered fas fa-4x fa-info"></i>
+          </a>
+          <br />
+          <p class="text-muted">Learn about the 
+            <a href="https://competitions.codalab.org/competitions/20071#learn_the_details-submission-format">submission format details</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <a href="https://competitions.codalab.org/competitions/20071#results">
+            <i class="text-center centered fas fa-4x fa-trophy"></i>
+          </a>
+          <p class="text-muted">Submit your results on 
+            <a href="https://competitions.codalab.org/competitions/20071#results">CodaLab website</a>
+          </p>
+        </div>
+      </div>
+
+      <figure class="text-muted">
+        <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+        <img src="{{ site.baseurl }}/static/img/stats-figures/challenge3.png" style="width: 100%" class="img-responsive"/> 
+      </figure>
+    </section>
+
+    <section class="challenge" id="challenge-object-detection">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="subheading"><a href="https://competitions.codalab.org/competitions/20111">Object-Detection Challenge</a></h4>
+          <p class="text-muted">
+            This challenge focuses on object detection and localisation.  Note
+            that our annotations only capture the ‘active’ objects pre-,
+            during- and post- interaction. To participate in the challenge
+            bounding box predictions with confidence scores should be submitted
+            for sampled frames from the seen (S1) and unseen (S2) test sets.
+          </p>
+        </div>
+      </div>
+
+      <div class="details row text-center">
+        <div class="col-md">
+          <a href="https://competitions.codalab.org/competitions/20111#learn_the_details-submission-format">
+            <i class="text-center centered fas fa-4x fa-info"></i>
+          </a>
+          <br />
+          <p class="text-muted">Learn about the 
+            <a href="https://competitions.codalab.org/competitions/20111#learn_the_details-submission-format">submission format details</a>
+          </p>
+        </div>
+        <div class="col-md">
+          <a href="https://competitions.codalab.org/competitions/20111#results">
+            <i class="text-center centered fas fa-4x fa-trophy"></i>
+          </a>
+          <p class="text-muted">Submit your results on 
+            <a href="https://competitions.codalab.org/competitions/20111#results">CodaLab website</a>
+          </p>
+        </div>
+      </div>
+
+      <figure class="text-muted">
+        <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+        <img src="{{ site.baseurl }}/static/img/stats-figures/challenge1.png" style="width: 100%" class="img-responsive"/> 
+      </figure>
+    </section>
+
+
   </div>
 </section>
 
@@ -435,4 +531,5 @@ layout: default
           </div>
         </div>
       </div>
+    </div>
 </section>
