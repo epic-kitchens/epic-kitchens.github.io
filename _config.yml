@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: EPIC Kitchens
-year: 2018
+year: 2019
 email: uob-epic-kitchens2018@bristol.ac.uk
 description: >-
   EPIC Kitchens
