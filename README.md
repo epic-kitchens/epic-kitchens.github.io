@@ -1,4 +1,4 @@
-# EPIC kitchens 2018
+# EPIC KITCHENS
 
 **Department of Computer Science. University of Bristol**
 
