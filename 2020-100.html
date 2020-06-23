@@ -77,33 +77,17 @@ layout: default
         <h3 class="section-subheading text-muted">Some graphical representations of our dataset and annotations</h3>
       </div>
     </div>
-    <!-- to add graphs follow below example -->
-    <div class="row justify-content-md-center text-center">
-      <div class="col-md-4 centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/stats-figures/timeOfDay.png" style="width: 100%" class="img-responsive"/> 
-        <h4>Time Of Day</h4>
-      </div>
-      <div class="col-md-4 centered" style="padding:1rem; vertical-align:bottom">
-        <!-- TO ADD GRAPH: replace div below, ex: above <img> tag -->
-        <img src="{{ site.baseurl }}/static/img/stats-figures/pie.png" style="width: 100%" class="img-responsive"/>  
-        <h4>Activities</h4>
-      </div>
-      <div class="col-md-4 centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/stats-figures/Wordle-min.png" style="width: 100%" class="img-responsive"/>  
-        <h4>Wordle of annotations</h4>
-      </div>
-    </div>
 
 
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/stats-figures/verb_stats.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/img/stats-figures/verb_categories.png" style="width: 100%" class="img-responsive"/> 
       </div>
     </div>
 
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/stats-figures/nouns-stats.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/img/stats-figures/nouns-categories.png" style="width: 100%" class="img-responsive"/> 
       </div>
     </div>
 
@@ -159,32 +143,34 @@ layout: default
       <div class="col-md-12">
         <h4 class="section-subheading">Sequences and Annotations</h4>
         <p>
-          Sequences: Available at <a href="http://dx.doi.org/10.5523/bris.3h91syskeag572hl6tvuovwv4d">Data.Bris servers (1TB zipped)</a>
+          Extended Sequences: Available at <a href="http://dx.doi.org/10.5523/bris.2g1n6qdydwa9u22shpxqzp0t8m">Data.Bris servers (740GB zipped)</a>
         </p>
         <p>
-          To download parts of the dataset, we provide three scripts for downloading the 
-          <ul>
-            <li><a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_videos.sh">videos</a></li>
-            <li><a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_frames_rgb_flow.sh">frames</a></li> 
-            <li><a href="https://github.com/epic-kitchens/download-scripts/blob/master/download_object_detection_images.sh">object annotation images</a> separately</li>
-          </ul>
+          Original Sequences: Available at <a href="http://dx.doi.org/10.5523/bris.3h91syskeag572hl6tvuovwv4d">Data.Bris servers (1TB zipped)</a>
         </p>
+        <p>
+        <p>  We also offer <a href="https://github.com/epic-kitchens/epic-kitchens-download-scripts">download scripts</a> with options to download various parts of the dataset. Check GitHub for all options</p>
         <aside>
         Note: These scripts will work for Linux and Mac. For Windows users a bash installation should work.<br/>
-        Annotations: Available at <a href="https://github.com/epic-kitchens/annotations">GitHub Repo epic-kitchens/annotations</a>
+        Annotations: Available at <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations">GitHub Repo epic-kitchens/epic-kitchens-100-annotations</a>
         </aside>
-        <section id="arModels">
-          <h4 class="section-subheading">Pretrained Models</h4>
-          <p>
-           We release several pretrained models for action recognition (PyTorch) as well as object detection faster RCNN model</p>
-          <ul>
-            <li><a href="https://github.com/epic-kitchens/action-models">Download Action Recognition Models (July 2019)</a></li>
-            <li><a href="https://data.bris.ac.uk/data/dataset/gw5q146a9dqd2t82jhu8noe3m">Download Object Detection Models (Jan 2020)</a></li>
-            <li><a href="http://arxiv.org/abs/1908.00867">Technical Report</a></li> 
-          </ul>
-
+        <section>
           <h4 class="section-subheading">Publication(s)</h4>
-          <p>Cite the following paper 
+          
+          <p>Cite the following technical report
+            (<a href="https://arxiv.org/abs/1804.02748">available now on Arxiv</a>):</p>
+          <pre class="bibtex"><code>@ARTICLE{Damen2020RESCALING,
+   title={Rescaling Egocentric Vision},
+   author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria  and and 
+           Furnari, Antonino and Ma, Jian and Kazakos, Evangelos and Moltisanti, Davide and Munro, Jonathan 
+           and Perrett, Toby and Price, Will and Wray, Michael},
+           journal   = {CoRR},
+          volume    = {abs/???},
+          year      = {2020},
+          ee        = {http://arxiv.org/abs/???},
+} </code></pre>
+          
+          <p>And the original paper 
             (<a href="https://arxiv.org/abs/1804.02748">available now on Arxiv</a> and 
             <a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Dima_Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html">the CVF</a>):</p>
           <pre class="bibtex"><code>@INPROCEEDINGS{Damen2018EPICKITCHENS,
@@ -196,7 +182,7 @@ layout: default
    year={2018}
 } </code></pre>
             
-          <p>An extended version is now
+          <p>A journal version of the ECCV 2018 paper is now
               (<a href="https://arxiv.org/abs/2005.00343">available now on Arxiv</a> and <a href="https://ieeexplore.ieee.org/document/9084270">IEEE Early Access</a>):</p>
           <pre class="bibtex"><code>@ARTICLE{Damen2020Collection,
    title={The EPIC-KITCHENS Dataset: Collection, Challenges and Baselines},
@@ -231,7 +217,7 @@ layout: default
         <h3 class="section-subheading text-muted">Challenge and Leaderboard Details</h3>
       </div>
     </div>
-      
+        <!--
         <div class="row">
       <div class="col-md-12">
         For 2019 Challenge Results and winners, go to: <a href="https://epic-kitchens.github.io/2019.html#results">Challenge 2019 Details</a>.
@@ -470,7 +456,7 @@ layout: default
 
 
   </div>
-</section>
+</section> -->
 
 <!-- Team -->
 <section class="bg-light" id="team">
@@ -530,16 +516,7 @@ layout: default
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="team-member">
-          <a href="http://www.cs.utoronto.ca/~fidler/">
-            <img class="mx-auto rounded-circle" src="{{site.baseurl}}/static/img/profile/sanja-min.jpg" />
 
-            <h4>Sanja Fidler</h4></a>
-          <h5>Co-I (2017-2019)</h5>
-          <h6 class="text-muted">University of Toronto, NVIDIA AI Research<br/>Canada</h6>
-        </div>
-      </div>
 
 
     </div>
@@ -644,10 +621,14 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="section-heading text-uppercase">Sponsors</h2>
+          <h2 class="section-heading text-uppercase">Research Funding</h2>
           <div class="text-muted">
-            <p> The dataset is sponsored by:
+            <p> The work on extending EPIC-KITCHENS was supported by the following research grants
               <ul class="text-muted">
+                <li><a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/T004991/1">EPSRC Early Career Fellowship UMPIRE</a></li>
+                <li>University of Bristol Research Fellowship 2018</li>
+                <li>EPSRC DTP Funding for: Moltisanti, Wray, Doughty, Price, Kazakos and Munro</li>
+                <li>Piano della Ricerca 2016-2018 linea diIntervento 2 of DMI and by MISE - PON I&C 2014-2020, ENIGMA project (CUP: B61B19000520008) and MIUR AIM - Attrazione e Mobilita Internazionale Linea 1 - AIM1893589 - CUP E64118002540007</li>
                 <li><a href="https://www.nokia.com/en_int/nokia-technologies">Nokia Technologies</a> - Charitable Donation</li>
                 <li><a href="http://www.bristol.ac.uk/golding/">Jean Golding Institute, University of Bristol</a> - Seed corn funding</li>
               </ul>
@@ -689,7 +670,7 @@ layout: default
      "contactPoint":{
         "@type":"ContactPoint",
         "contactType": "technical support",
-        "email":"uob-epic-kitchens2018@bristol.ac.uk",
+        "email":"uob-epic-kitchens@bristol.ac.uk",
         "url":"https://github.com/epic-kitchens/annotations/issues"
      }
   },
