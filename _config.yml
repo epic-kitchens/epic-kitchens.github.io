@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: EPIC Kitchens
-year: 2020
-email: uob-epic-kitchens2018@bristol.ac.uk
+year: 2020-100
+email: uob-epic-kitchens@bristol.ac.uk
 description: >-
   EPIC Kitchens
 baseurl: "" # the subpath of your site, e.g. /blog
