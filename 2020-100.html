@@ -370,7 +370,7 @@ layout: default
         <section class="challenge" id="challenge-action-recognition">
           <div class="row">
             <div class="col-md-12">
-              <h5 class="subheading"><a href="">Action Recognition</a></h4>
+              <h5 class="subheading">Action Recognition</h4>
               <p class="text-muted">
                 <b>Task. </b> 
                 Assign a (verb, noun) label to a trimmed segment, using strong or weak supervision.</br>
@@ -387,34 +387,47 @@ layout: default
               </p>
             </div>
           </div>
-        </section>
-        
-        <!--
-        <section class="challenge" id="challenge-ws-action-recognition">
-          <div class="row">
-            <div class="col-md-12">
-              <h5 class="subheading"><a href="">Weakly-Supervised Action Recognition</a></h4>
+          
+          <div class="details row text-center">
+            <div class="col-md">
+              <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-recognition-challenge">
+                <i class="text-center centered fas fa-4x fa-seedling"></i>
+              </a>
+              <br />
               <p class="text-muted">
-                <b>Task. </b> 
-                Assign a (verb, noun) label to a trimmed segment.</br>
-                <b>Training input. </b> A set of <i>untrimmed videos</i>. 
-                Each video is annotated with a list of (timestamp, verb, noun) labels. 
-                Note that for each action you are given a <i>single, roughly aligned</i> timestamp, i.e. one timestamp located 
-                around the action. Timestamps may be located over background frames or frames belonging to another action.
-                </br>    
-                <b>Testing input. </b> A set of trimmed unlabelled action segments. </br>            
-                <b>Evaluation metrics. </b> Top-1/5 accuracy for verb, noun and action (verb+noun), on the validation and test sets. </br>
-                <b>Caveat. </b> You are not allowed to use any trimmed action segment for training.                
+                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-recognition-challenge">Get started</a>
               </p>
             </div>
-          </div>
-        </section>
-        -->
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+                <i class="text-center centered fas fa-4x fa-info"></i>
+              </a>
+              <br />
+              <p class="text-muted">Learn about the 
+                <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#results">
+                <i class="text-center centered fas fa-4x fa-trophy"></i>
+              </a>
+              <p class="text-muted">Submit your results on 
+                <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+              </p>
+            </div>
+         </div>
+         <figure class="text-muted">
+            <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+            <img src="{{ site.baseurl }}/static/img/challenges-epic-100/ar.png" style="width: 100%" class="img-responsive"/> 
+         </figure>
+    
+          
+        </section>              
         
         <section class="challenge" id="challenge-action-detection">
           <div class="row">
             <div class="col-md-12">
-              <h5 class="subheading"><a href="">Action Detection</a></h4>
+              <h5 class="subheading">Action Detection</h4>
               <p class="text-muted">
                 <b>Task. </b> 
                 Detect the start and the end of each action in an <i>untrimmed</i> video. Assign a (verb, noun) label to each 
@@ -426,12 +439,47 @@ layout: default
               </p>
             </div>
           </div>
+          
+          <div class="details row text-center">
+            <div class="col-md">
+              <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-detection-challenge">
+                <i class="text-center centered fas fa-4x fa-seedling"></i>
+              </a>
+              <br />
+              <p class="text-muted">
+                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-detection-challenge">Get started</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+                <i class="text-center centered fas fa-4x fa-info"></i>
+              </a>
+              <br />
+              <p class="text-muted">Learn about the 
+                <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#results">
+                <i class="text-center centered fas fa-4x fa-trophy"></i>
+              </a>
+              <p class="text-muted">Submit your results on 
+                <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+              </p>
+            </div>
+         </div>
+         <figure class="text-muted">
+            <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+            <img src="{{ site.baseurl }}/static/img/challenges-epic-100/ad.png" style="width: 100%" class="img-responsive"/> 
+         </figure>
+          
+          
         </section>
         
         <section class="challenge" id="challenge-action-anticipation">
           <div class="row">
             <div class="col-md-12">
-              <h5 class="subheading"><a href="">Action Anticipation</a></h4>
+              <h5 class="subheading">Action Anticipation</h4>
               <p class="text-muted">
                 <b>Task. </b> 
                 Predict the (verb, noun) label of a future action observing a segment preceding its occurrence. </br>
@@ -450,12 +498,46 @@ layout: default
               </p>
             </div>
           </div>
+          
+          <div class="details row text-center">
+            <div class="col-md">
+              <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-anticipation-challenge">
+                <i class="text-center centered fas fa-4x fa-seedling"></i>
+              </a>
+              <br />
+              <p class="text-muted">
+                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-anticipation-challenge">Get started</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+                <i class="text-center centered fas fa-4x fa-info"></i>
+              </a>
+              <br />
+              <p class="text-muted">Learn about the 
+                <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#results">
+                <i class="text-center centered fas fa-4x fa-trophy"></i>
+              </a>
+              <p class="text-muted">Submit your results on 
+                <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+              </p>
+            </div>
+         </div>
+         <figure class="text-muted">
+            <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+            <img src="{{ site.baseurl }}/static/img/challenges-epic-100/aa.png" style="width: 100%" class="img-responsive"/> 
+         </figure>
+          
         </section>
         
         <section class="challenge" id="challenge-domain-adaptation">
           <div class="row">
             <div class="col-md-12">
-              <h5 class="subheading"><a href="">Unsupervised Domain Adaptation for Action Recognition</a></h4>
+              <h5 class="subheading">Unsupervised Domain Adaptation for Action Recognition</h4>
               <p class="text-muted">
                 <b>Task. </b> Assign a (verb, noun) label to a trimmed segment, following the Unsupervised Domain Adaptation paradigm: 
                 a labelled source domain is used for training, and the model needs to adapt to an unlabelled target domain. </br>
@@ -469,12 +551,47 @@ layout: default
               </p>
             </div>
           </div>
+          
+          <div class="details row text-center">
+            <div class="col-md">
+              <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#unsupervised-domain-adaptation-challenge">
+                <i class="text-center centered fas fa-4x fa-seedling"></i>
+              </a>
+              <br />
+              <p class="text-muted">
+                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#unsupervised-domain-adaptation-challenge">Get started</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+                <i class="text-center centered fas fa-4x fa-info"></i>
+              </a>
+              <br />
+              <p class="text-muted">Learn about the 
+                <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#results">
+                <i class="text-center centered fas fa-4x fa-trophy"></i>
+              </a>
+              <p class="text-muted">Submit your results on 
+                <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+              </p>
+            </div>
+         </div>
+         <figure class="text-muted">
+            <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+            <img src="{{ site.baseurl }}/static/img/challenges-epic-100/uda.png" style="width: 100%" class="img-responsive"/> 
+         </figure>
+          
+          
         </section>
         
         <section class="challenge" id="challenge-action-retrieval">
           <div class="row">
             <div class="col-md-12">
-              <h5 class="subheading"><a href="">Action Retrieval</a></h4>
+              <h5 class="subheading">Action Retrieval</h4>
               <p class="text-muted">
                 <b>Tasks. </b> <i>Video to text</i>: given a query video segment, rank captions such that those with a higher rank are 
                 more semantically relevant to the action in the query video segment. 
@@ -490,6 +607,40 @@ layout: default
               </p>
             </div>
           </div>
+          
+          <div class="details row text-center">
+            <div class="col-md">
+              <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-retrieval-challenge">
+                <i class="text-center centered fas fa-4x fa-seedling"></i>
+              </a>
+              <br />
+              <p class="text-muted">
+                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#action-retrieval-challenge">Get started</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+                <i class="text-center centered fas fa-4x fa-info"></i>
+              </a>
+              <br />
+              <p class="text-muted">Learn about the 
+                <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://competitions.codalab.org/competitions/20115#results">
+                <i class="text-center centered fas fa-4x fa-trophy"></i>
+              </a>
+              <p class="text-muted">Submit your results on 
+                <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+              </p>
+            </div>
+         </div>
+         <figure class="text-muted">
+            <figcaption>Sample qualitative results from the challenge's baseline</figcaption>
+            <img src="{{ site.baseurl }}/static/img/challenges-epic-100/aret.png" style="width: 100%" class="img-responsive"/> 
+         </figure>
+          
         </section>
         
       </div>
