@@ -125,7 +125,7 @@ layout: default
       <div class="row justify-content-md-center text-center">
       <div class="col-md-4 centered" style="padding:1rem;">
       <div id="graph7" style="width: 100%" class="img-responsive"></div>
-      <h4>Number of annotators</br>used per video</h4>
+      <h4>Number of annotators<br/>used per video</h4>
       </div>
       <div class="col-md-4 centered" style="padding:1rem;">
       <div id="graph8" style="width: 100%" class="img-responsive"></div>
@@ -236,20 +236,22 @@ layout: default
     <div class="row">
       <div class="col-md-12 text-center">
         <h2 class="section-heading text-uppercase">EPIC-KITCHENS-100 2021 Challenges</h2>
-        <h3 class="section-subheading text-muted">Challenge and Leaderboard Details COMING SOON</h3>
+        <h3 class="section-subheading text-muted">Challenge and Leaderboard Details with links to Codalab Leaderboards</h3>
       </div>
     </div>
      
         <div class="row">
       <div class="col-md-12">
-        For Challenge Results and winners on EPIC-KITCHENS-55, go to: <a href="https://epic-kitchens.github.io/2020-55.html#results">Challenge 2020 Details</a>. Note that these are NEW leaderboards, and results are not directly comparable to last year's results.
+        For Challenge Results and winners on EPIC-KITCHENS-55, go to: <a href="https://epic-kitchens.github.io/2020-55.html#results">Challenge 2020 Details</a>. <br/>
+          
+        Note that these are NEW leaderboards, and results are not directly comparable to last year's results.
         <h4 class="subheading">EPIC-Kitchens 2021 Challenges - Dates</h4>
         <div class="row">
             <div class="col-md-3">
-                Sep 1, 2020
+                Aug 23rd, 2020
             </div>
             <div class="col-md-9">
-                EPIC-Kitchens Challenges 2021 Launched!
+                EPIC-Kitchens Challenges 2021 Launched alongisde EPIC@ECCV Workshop
             </div>
         </div>
         <div class="row">
@@ -282,8 +284,8 @@ layout: default
     <div class="row">
       <div class="col-md-12">
         <h4 class="subheading">Challenges Guidelines</h4>
-        <p>The five challenges below and their test sets and evaluation servers are available via CodaLab. The leaderboards will decide the winners for each individual challenge.</p>
-          <p>For each challenge, the CodaLab server page details submission format and evaluation metrics. To <b>enter any of the five competitions</b>, you need to register an account for that challenge using a valid institute (university/company) email address. A single registration per research team is allowed. We perform a manual check for each submission, and expect to accept registrations within 1 working day.</p>
+        <p>The five challenges below and their test sets and evaluation servers are available via CodaLab. The leaderboards will decide the winners for each individual challenge. For each challenge, the CodaLab server page details submission format and evaluation metrics. </p>
+          <p>To <b>enter any of the five competitions</b>, you need to register an account for that challenge using a valid institute (university/company) email address. A single registration per research team is allowed. We perform a manual check for each submission, and expect to accept registrations within 2 working days.</p>
           <p>For all challenges the maximum submissions per day is limited to 1, and the overall maximum number of submissions per team is limited to 50 overall, submitted once a day. This includes any failed submissions due to formats - please do not contact us to ask for increasing this limit.</p>
           <p>To <b>submit</b> your results, follow the JSON submission format, upload your results and give time for the evaluation to complete (in the order of several minutes). <b>Note our new rules on declaring the supervision level, given our proposed scale, for each submission.</b> After the evaluation is complete, the results automatically appear on the public leaderboards but you are allowed to withdraw these at any point in time.</p>
           <p>To <b>participate</b> in the challenge, you need to have your results on the public leaderboard, along with an informative team name (that represents your institute or the collection of institutes participating in the work), as well as brief information on your method. You are also required to submit a report (details TBC).</p><!-- on your method (in the form of 2-6 pages) to the EPIC@CVPR workshop by June 5th, detailing your entry's technical details.</p>
@@ -344,28 +346,24 @@ layout: default
         </ul>             
         
         <p class="text-muted">        
-        <b>Splits. </b> The dataset is split in train/validation/test sets, with a ratio of roughly 75/10/15. </br>         
-        The action recognition, detection and anticipation challenges use all the splits. </br>        
-        The unsupservised domain adaptation and action retrieval challenges use different splits as detailed below. </br>        
+        <b>Splits. </b> The dataset is split in train/validation/test sets, with a ratio of roughly 75/10/15. <br/>         
+        The action recognition, detection and anticipation challenges use all the splits. <br/>        
+        The unsupservised domain adaptation and action retrieval challenges use different splits as detailed below. <br/>        
         
-        You can download all the necessary annotations <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations" target="_blank">here</a>. </br>
+        You can download all the necessary annotations <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations" target="_blank">here</a>. <br/>
         You can find more details about the splits in <a href="https://arxiv.org/pdf/2006.13256.pdf" target="_blank">our paper</a>.
         </p>
         
         <p class="text-muted">
+        <b>Evaluation. </b> All challenges are evaluated considering all segments in the Test split. 
+        The action recognition and anticipation challenges are additionally evaluated considering unseen participants and tail classes. These are automatically evaluated in the scripts and you do not need to do anything specific to report these.<br/>
         <b>Unseen participants. </b> The validation and test sets contain participants that are not present in the train set. 
         There are 2 unseen participants in the validation set, and another 3 participants in the test set. 
-        The corresponding action segments are 1,065 and 4,110 respectively. </br>
+        The corresponding action segments are 1,065 and 4,110 respectively. <br/>
         <b>Tail classes. </b> These are the set of smallest classes whose instances account for 20&#37 of the total number of instances in 
         training. A tail action class contains either a tail verb class or a tail noun class. 
-        There are 86/228/3,535 verb/noun/action tail classes. </br></br>
-        <b>Evaluation. </b> All challenges are evaluated considering all testing segments. 
-        The action recognition and anticipation challenges are additionally evaluated considering unseen participants and tail classes.
+        <br/><br/>
         </p>
-             
-<!--
-        TODO: add links to codalab pages
--->
         
         <section class="challenge" id="challenge-action-recognition">
           <div class="row">
@@ -373,17 +371,15 @@ layout: default
               <h5 class="subheading">Action Recognition</h4>
               <p class="text-muted">
                 <b>Task. </b> 
-                Assign a (verb, noun) label to a trimmed segment, using strong or weak supervision.</br>
-                <b>Training input (strong supervision). </b> A set of trimmed action segments, each annotated with a (verb, noun) label.  </br>               
+                Assign a (verb, noun) label to a trimmed segment.<br/>
+                <b>Training input (strong supervision). </b> A set of trimmed action segments, each annotated with a (verb, noun) label.  <br/>               
                 <b>Training input (weak supervision). </b> A set of <i>untrimmed videos</i>, each annotated with a list of (timestamp, verb, noun) labels. 
                 Note that for each action you are given a <i>single, roughly aligned</i> timestamp, i.e. one timestamp located 
-                around the action. Timestamps may be located over background frames or frames belonging to another action. </br>
-                <b>Testing input. </b> A set of trimmed unlabelled action segments. </br>
-                <b>Splits. </b> Train and validation for training, evaluated on the test split. </br>
+                around the action. Timestamps may be located over background frames or frames belonging to another action. <br/>
+                <b>Testing input. </b> A set of trimmed unlabelled action segments. <br/>
+                <b>Splits. </b> Train and validation for training, evaluated on the test split. <br/>
                 <b>Evaluation metrics. </b> Top-1/5 accuracy for verb, noun and action (verb+noun), calculated for all segments as well as 
-                unseen participants and tail classes.                                
-                </br>
-                <b>Caveat. </b> You are not allowed to use any trimmed action segment for training when using weak supervision.                
+                unseen participants and tail classes.                
               </p>
             </div>
           </div>
@@ -431,10 +427,10 @@ layout: default
               <p class="text-muted">
                 <b>Task. </b> 
                 Detect the start and the end of each action in an <i>untrimmed</i> video. Assign a (verb, noun) label to each 
-                detected segment. </br>
-                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun) label.  </br>                
-                <b>Testing input. </b> A set of <i>untrimmed</i> videos. </br>
-                <b>Splits. </b> Train and validation for training, evaluated on the test split. </br>
+                detected segment. <br/>
+                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun) label.  <br/>                
+                <b>Testing input. </b> A set of <i>untrimmed</i> videos. <u>Important:</u> You are not allowed to use the knowledge of trimmed segments in the test set when reporting for this challenge.<br/>
+                <b>Splits. </b> Train and validation for training, evaluated on the test split. <br/>
                 <b>Evaluation metrics. </b> Mean Average Precision (mAP) @ IOU 0.1 to 0.5.
               </p>
             </div>
@@ -482,15 +478,14 @@ layout: default
               <h5 class="subheading">Action Anticipation</h4>
               <p class="text-muted">
                 <b>Task. </b> 
-                Predict the (verb, noun) label of a future action observing a segment preceding its occurrence. </br>
-                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun) label. </br>
+                Predict the (verb, noun) label of a future action observing a segment preceding its occurrence. <br/>
+                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun) label. <br/>
                 <b>Testing input. </b> During testing you are allowed to observe a segment that <i>ends</i> at least one second before 
-                the start of the action you are testing on. This means that given an action with bounds <mark>[s, e]</mark>, you are allowed to 
-                observe a segment <mark>[s - (1second + d) , s - 1second]</mark>, where the duration <mark>d</mark> of the segment is for you to decide. </br>                
-                <b>Splits. </b> Train and validation for training, evaluated on the test split. </br>
+                the start of the action you are testing on.<br/>                
+                <b>Splits. </b> Train and validation for training, evaluated on the test split. <br/>
                 <b>Evaluation metrics. </b> Top-5 recall averaged for all classes, as defined <a href="https://openaccess.thecvf.com/content_ECCVW_2018/papers/11133/Furnari_Leveraging_Uncertainty_to_Rethink_Loss_Functions_and_Evaluation_Measures_for_ECCVW_2018_paper.pdf" target="_blank">here</a>,
                 calculated for all segments as well as unseen participants and tail classes.
-                </br>
+                <br/>
                 
 <!--
                 <b>Caveat. </b> You are not allowed to observe any frame after one second from the start of a testing action.
@@ -540,13 +535,13 @@ layout: default
               <h5 class="subheading">Unsupervised Domain Adaptation for Action Recognition</h4>
               <p class="text-muted">
                 <b>Task. </b> Assign a (verb, noun) label to a trimmed segment, following the Unsupervised Domain Adaptation paradigm: 
-                a labelled source domain is used for training, and the model needs to adapt to an unlabelled target domain. </br>
-                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun) label.  </br>                
-                <b>Testing input. </b> A set of trimmed unlabelled action segments. </br>
+                a labelled source domain is used for training, and the model needs to adapt to an unlabelled target domain. <br/>
+                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun) label.  <br/>                
+                <b>Testing input. </b> A set of trimmed unlabelled action segments. <br/>
                 <b>Splits. </b> Videos recorded in 2018 (EPIC-KITCHENS-55) constitute the source domain, 
                 while videos recorded for EPIC-KITCHENS-100's extension constitute the unlabelled target domain. 
                 This challenge uses custom train/validation/test splits, which you can find 
-                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#unsupervised-domain-adaptation-challenge" target="_blank">here</a>. </br> 
+                <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations#unsupervised-domain-adaptation-challenge" target="_blank">here</a>. <br/> 
                 <b>Evaluation metrics. </b> Top-1/5 accuracy for verb, noun and action (verb+noun), on the target test set.
               </p>
             </div>
@@ -596,13 +591,12 @@ layout: default
                 <b>Tasks. </b> <i>Video to text</i>: given a query video segment, rank captions such that those with a higher rank are 
                 more semantically relevant to the action in the query video segment. 
                 <i>Text to video:</i> given a query caption, rank video segments such that those with a higher rank are more semantically relevant 
-                to the query caption. </br>                                
-                <b>Training input. </b> A set of trimmed action segments, each annotated with a (verb, noun, caption) label. 
-                Captions correspond to the narration in English from which the action segment was obtained. </br>                
-                <b>Testing input. </b> A set of trimmed unlabelled action segments (video to text task) or 
-                a set of captions (text to video task). </br>
-                <b>Splits. </b> This challenge is evaluated solely on the validation set, thus only the train split can be used for training. </br>                
-                <b>Evaluation metrics. </b> Mean Average Precision (mAP) and normalised Discounted Cumulative Gain (nDCG). 
+                to the query caption. <br/>                                
+                <b>Training input. </b> A set of trimmed action segments, each annotated with a caption. 
+                Captions correspond to the narration in English from which the action segment was obtained. <br/>                
+                <b>Testing input. </b> A set of trimmed action segments with captions. Important: You are not allowed to use the known correspondence in the Test set <br/>
+                <b>Splits. </b> This challenge has its own custom splits, available <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations/tree/master/retrieval_annotations">here</a>. <br/>                
+                <b>Evaluation metrics. </b> normalised Discounted Cumulative Gain (nDCG) and Mean Average Precision (mAP). 
                 You can find more details in <a href="https://arxiv.org/pdf/2006.13256.pdf" target="_blank">our paper</a>. 
               </p>
             </div>
@@ -619,20 +613,20 @@ layout: default
               </p>
             </div>
             <div class="col-md">
-              <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">
+              <a href="">
                 <i class="text-center centered fas fa-4x fa-info"></i>
               </a>
               <br />
               <p class="text-muted">Learn about the 
-                <a href="https://competitions.codalab.org/competitions/20115#learn_the_details-submission-format">submission format details</a>
+                <a href="">submission format details</a>
               </p>
             </div>
             <div class="col-md">
-              <a href="https://competitions.codalab.org/competitions/20115#results">
+              <a href="">
                 <i class="text-center centered fas fa-4x fa-trophy"></i>
               </a>
               <p class="text-muted">Submit your results on 
-                <a href="https://competitions.codalab.org/competitions/20115#results">CodaLab website</a>
+                <a href="">CodaLab website</a>
               </p>
             </div>
          </div>
