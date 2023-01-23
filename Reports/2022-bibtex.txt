@@ -1,0 +1,6 @@
+@techreport{Damen2021CHALLENGES,
+  author      = “Damen, Dima and Fragomeni, Adriano and Perrett, Toby and Whettam, Daniel and Wray, Michael and Zhu, Bin and Furnari, Antonino and Farinella, Giovanni Maria and Moltisanti, Davide",
+  title       = "EPIC-KITCHENS-100- 2022 Challenges Report",
+  institution = “University of Bristol",
+  year        = “2022"
+}
