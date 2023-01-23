@@ -270,26 +270,26 @@ layout: default
       <b><font color="red">New</font></b> leaderboards will be open for the <b>challenge phase on Tue 17 Jan 2023</b>. Check the <a href="./2022.html#results">results of the 2022 chalenge results below</a><br/>
       
 
-        <h4 class="subheading"><s>EPIC-Kitchens 2023 Challenges</s></h4>
+        <h4 class="subheading">EPIC-Kitchens 2023 Challenges</h4>
         <div class="row">
             <div class="col-md-3">
-                <s>Jan 17th 2023,</s>
+                Jan 23rd 2023,
             </div>
             <div class="col-md-9">
-                All leaderboards will open (note new challenges for 2023)
+                All leaderboards are open (note new challenges for 2023)
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
-                <s>June 1st 2023,</s>
+                June 1st 2023,
             </div>
             <div class="col-md-9">
-                Server Submission Deadline at 23:59:59 GMT
+                Server Submission Deadline at 23:00:00 GMT
             </div>
         </div>  
         <div class="row">
             <div class="col-md-3">
-                <s>June 6th 2023,</s>
+                June 6th 2023,
             </div>
             <div class="col-md-9">
                 Deadline for Submission of Technical Reports on CMT (Link advertised shortly - see guidelines below)
@@ -297,10 +297,10 @@ layout: default
         </div>  
         <div class="row">
             <div class="col-md-3">
-                <s>Mon June 19 2023,</s>
+                Mon June 19 2023,
             </div>
             <div class="col-md-9">
-                Results announced at 11th EPIC@CVPR2023 workshop in Vancouver <!--<a href="https://eyewear-computing.org/EPIC_CVPR23/">11th EPIC@CVPR2023 workshop in Vancouver</a>-->
+                Results announced at 11th EPIC@CVPR2023 workshop in Vancouver <a href="https://eyewear-computing.org/EPIC_CVPR23/">11th EPIC@CVPR2023 workshop in Vancouver</a>
             </div>
         </div>  
       </div>
@@ -401,7 +401,8 @@ layout: default
               </p>
               <p><b>Validation Submission Phase. </b> Between Jan and end of March, interested parties can submit their results on the validation set to the leaderboard. Successful top submissions will be invited to evaluate on the hidden Test Set in the next phase</p>
               <p><b>Test Submission (Final Test).</b> During this final test, interested participants who have already registered their interest through submitting their models to the Validation Server will be contacted to evaluate this on the test set. As we do not plan to release the first frame annotations for the test set, to avoid overfitting, you will be asked to submit the trained models for inference through a Docker that will be evaluated at our end. Such approach is common in other tracking challenges. We will have 2 submission points - first preliminary (end of April) and then final (end of May). Winners of the challenge are only decided based on the performance on the hidden test set</p>
-                <b>Evaluation metrics. </b> Average of J-Decay and F-Recall as with other video object segmentation benchmarks.
+                <b>Evaluation metrics. </b> Average of J-Decay and F-Recall as with other video object segmentation benchmarks.<br/>
+                <b>Lead:</b> Ahmad DarKhalil (University of Bristol) and Richard Higgins (Univ of Michigan)
             </div>
           </div>
           
@@ -451,7 +452,8 @@ layout: default
                 <b>Training input. </b> A set of images with hand masks, object masks and hand-object relations. <br/>                
                 <b>Testing input. </b> A set of images in the test set.<br/>
                 <b>Splits. </b> VISOR Train and validation for training, evaluated on the VISOR test split. <br/>
-                <b>Evaluation metrics. </b> Mean Average Precision (mAP) @ IOU 0.1 to 0.5.
+                <b>Evaluation metrics. </b> Mean Average Precision (mAP) @ IOU 0.1 to 0.5.<br/>
+                <b>Lead:</b> Dandan Shan (University of Michigan), Richard Higgins (University of Michigan) and David Fouhey (University of Michigan)
               </p>
             </div>
           </div>
@@ -500,6 +502,7 @@ layout: default
                 <b>Task. </b> 
                   The challenge requires to track an object instance through a first-person video sequence. The challenge will be carried out on the <a href="https://machinelearning.uniud.it/datasets/trek150/">TREK-150 dataset</a>, a subset of the EPIC-KITCHENS dataset labeled for single object tracking. More information on the dataset and downloads can be found <a href="https://machinelearning.uniud.it/datasets/trek150/">here</a>.
                 <br/>
+                  <b>Lead: Matteo Dunnhofer (University of Udine), Antonino Furnari (University of Catania), Giovanni Maria Farinella (University of Catania), Christian Micheloni (University of Udine)</b>
               </p>
             </div>
           </div>
@@ -549,7 +552,8 @@ layout: default
                 <b>Testing input. </b> A set of trimmed unlabelled audio segments. <br/>
                 <b>Splits. </b> Train/Val/Test splits are available
                 <a href="https://github.com/epic-kitchens/epic-sounds-annotations" target="_blank">here</a>. <br/> 
-                <b>Evaluation metrics. </b> Top-1/5 accuracy for audio class, on the target test set, as well as mAC mAP and mAUC for class-balanced metrics.
+                <b>Evaluation metrics. </b> Top-1/5 accuracy for audio class, on the target test set, as well as mAC mAP and mAUC for class-balanced metrics.<br/>
+                <b>Leads:</b> Jaesung Huh (University of Oxford), Jacob Chalk (University of Bristol), Evangelos Kazkos (ex- Univ of Bristol), Dima Damen (University of Bristol) and Andrew Zisserman (University of Oxford)
               </p>
             </div>
           </div>
@@ -916,9 +920,6 @@ layout: default
               Catania</a>. The original dataset was collected in collaboration with <a href="https://www.cs.utoronto.ca/~fidler/">Sanja Fidler, University of Toronto</a>
           </p>
         </div>
-      </div>
-    </div>
-
     <div class="row">
       <div class="col-md-6">
         <a href="http://www.bristol.ac.uk/">
@@ -1046,7 +1047,29 @@ layout: default
         </div>
       </div> <!--Bin -->
     </div>
-    <div class="row">
+
+              <div class="row">
+      <div class="col-md-3">
+        <div class="team-member">
+            <a href="">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/epic-sounds/static/img/profile/jc.jpg" />
+
+            <h4>Jacob Chalk</h4></a>
+          <h5>(July 2022 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div> <!--Jacob-->
+      <div class="col-md-3">
+        <div class="team-member">
+            <a href="">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/VISOR/static/img/profile/ad.png" />
+
+            <h4>Ahmad Darkhalil</h4></a>
+          <h5>(July 2022 - )</h5>
+          <h6 class="text-muted">University of Bristol</h6>
+        </div>
+      </div> <!--Ahmad-->
+
       <div class="col-md-3">
         <div class="team-member">
           <a href="http://www.davidemoltisanti.com/research">
@@ -1069,6 +1092,10 @@ layout: default
           <h6 class="text-muted">(curr.) University of Amsterdam</h6>
         </div>
       </div> <!--Hazel-->
+
+
+    </div>
+    <div class="row">
       <div class="col-md-3">
         <div class="team-member">
           <a href="https://jonmun.github.io">
@@ -1089,6 +1116,100 @@ layout: default
           <h6 class="text-muted">(prev.) University of Bristol</h6>
         </div>
       </div> <!--Will-->
+
+
+    </div>
+
+       <div class="col-lg-12">
+        <h2 class="section-heading text-uppercase">Additionally... 2023 Challenge Leads</h2>
+        <div class="text-muted">
+          <p> We are hosting additional challenges for 2023 led by (in Alphabetic Order):
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="https://ddshan.github.io">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/VISOR/static/img/profile/ds.jpg" />
+
+            <h4>Dandan Shan</h4></a>
+          <h5>(2023 - )</h5>
+          <h6 class="text-muted">University of Michigan</h6>
+        </div>
+      </div> <!--Dandan-->
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="http://relh.net">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/VISOR/static/img/profile/rh.png" />
+          
+          <h4>Richard Higgins</h4></a>
+          <h5>(2023 - )</h5>
+          <h6 class="text-muted">University of Michigan</h6>
+        </div>
+      </div> <!--Richard-->
+
+        
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="http://matteo-dunnhofer.github.io">
+            <img class="mx-auto rounded-circle" src="https://matteo-dunnhofer.github.io/assets/images/2022_circle_opt.png" />
+
+            <h4>Matteo Dunnhofer</h4></a>
+          <h5>(2023 -)</h5>
+          <h6 class="text-muted">University of Udine</h6>
+        </div>
+      </div> <!--Matteo-->
+      <div class="col-md-3">
+        <div class="team-member">
+            <a href="">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/epic-sounds/static/img/profile/jh.jpg" />
+
+            <h4>Jaesung Huh</h4></a>
+          <h5>(2023 - )</h5>
+          <h6 class="text-muted">University of Oxford</h6>
+        </div>
+      </div> <!--Jaesung-->
+        
+    </div>
+
+   
+    <div class="row">
+              <div class="col-md-3">
+        <div class="team-member">
+          <a href="https://web.eecs.umich.edu/~fouhey/">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/VISOR/static/img/profile/df.jpg" />
+
+            <h4>David Fouhey</h4></a>
+          <h5>(2023 - )</h5>
+          <h6 class="text-muted">University of Michigan</h6>
+        </div>
+      </div> <!--David F-->
+        
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="https://machinelearning.uniud.it/team/prof-christian-micheloni/">
+            <img class="mx-auto rounded-circle" src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Gbnq0F8AAAAJ&citpid=5" />
+          
+          <h4>Christian Micheloni</h4></a>
+          <h5>(2023 -)</h5>
+          <h6 class="text-muted">University of Udine</h6>
+        </div>
+      </div> <!--Christian -->
+      <div class="col-md-3">
+        <div class="team-member">
+          <a href="">
+            <img class="mx-auto rounded-circle" src="https://epic-kitchens.github.io/epic-sounds/static/img/profile/az.jpg" />
+
+            <h4>Andrew Zisserman</h4></a>
+          <h5>(2023 -)</h5>
+          <h6 class="text-muted">University of Oxford</h6>
+        </div>
+      </div> <!--az -->
 
 
     </div>
