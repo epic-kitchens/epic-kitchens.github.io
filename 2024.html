@@ -283,6 +283,7 @@ layout: default
               <li><a href="#hos">Hand-Object Segmentation Challenge</a></li>
               <li><a href="#tracking">TREK-150 Object Tracking Challenge</a></li>
               <li><a href="#sounds">EPIC-SOUNDS Audio-Based Interaction Recognition</a></li>
+              <li><a href="#sounds2">EPIC-SOUNDS Audio-Based Interaction <b>Detection</b> **NEW in 2024** </a></li>
               <li><a href="#challenge-action-recognition">Action Recognition</a></li>
               <li><a href="#challenge-action-detection">Action Detection</a></li>
               <li><a href="#challenge-action-anticipation">Action Anticipation</a></li>
@@ -610,6 +611,59 @@ layout: default
           
         </section>
         
+        
+        <section class="challenge" id="sounds2">
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="subheading">EPIC-SOUNDS: Audio-Based Interaction <b>Detection</b></h5>
+              <p class="text-muted">
+                <b>Task. </b> Given an untrimmed video, find all temporal segments that indicate an interaction event and assign these a label. This challenge uses the <a href="http://epic-kitchens.github.io/epic-sounds/">EPIC-SOUNDS</a> dataset annotations. <br/>
+                <b>Training input. </b> A set of untrimmed videos, each video annotated with a number of, potentially overlapping, start-end times and a label out of 44 class labels.  <br/>                
+                <b>Testing input. </b> A set of untrimmed videos. <br/>
+                <b>Splits. </b> Train (shared with recognition) /Val (shared with recognition) /Test (distinct from recognition) splits are available
+                <a href="https://github.com/epic-kitchens/epic-sounds-annotations" target="_blank">here</a>. <br/> 
+                <b>Evaluation metrics. </b> average mAP, on the target test set<br/>
+                <b>Leads:</b> Jacob Chalk (University of Bristol), Jaesung Huh (University of Oxford), Evangelos Kazkos (ex- Univ of Bristol), Dima Damen (University of Bristol) and Andrew Zisserman (University of Oxford)
+              </p>
+            </div>
+          </div>
+          
+          <div class="details row text-center">
+            <div class="col-md">
+              <a href="https://github.com/epic-kitchens/C10-epic-sounds-detection">
+                <i class="text-center centered fas fa-4x fa-seedling"></i>
+              </a>
+              <br />
+              <p class="text-muted">
+                <a href="https://github.com/epic-kitchens/C10-epic-sounds-detection">Get started</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://codalab.lisn.upsaclay.fr/competitions/17921#learn_the_details-submission-format">
+                <i class="text-center centered fas fa-4x fa-info"></i>
+              </a>
+              <br />
+              <p class="text-muted">Learn about the 
+                <a href="https://codalab.lisn.upsaclay.fr/competitions/17921#learn_the_details-submission-format">submission format details</a>
+              </p>
+            </div>
+            <div class="col-md">
+              <a href="https://codalab.lisn.upsaclay.fr/competitions/17921#results">
+                <i class="text-center centered fas fa-4x fa-trophy"></i>
+              </a>
+              <p class="text-muted">Submit your results on 
+                <a href="https://codalab.lisn.upsaclay.fr/competitions/17921#results">CodaLab website</a>
+              </p>
+            </div>
+         </div>
+         <figure class="text-muted">
+            <figcaption>Difference from visual and audio annotations is demonstrated in this teaser figure</figcaption>
+            <img src="{{ site.baseurl }}/static/img/challenges-epic-100/epic-sounds-detection.jpg" style="width: 100%" class="img-responsive"/> 
+         </figure>
+          
+          
+        </section>
+          
       </div>
     </div>
     <div class="row">
