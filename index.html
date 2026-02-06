@@ -1,21 +1,627 @@
----
-title: EPIC Kitchens
----
-
-{% capture url_current_year %}{{ site.url }}{{ site.baseurl }}/{{ site.year }}{% endcapture %}
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en-GB">
-  <head>
-    <meta name="theme-color" content="#373435ff"/>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="1; url={{ url_current_year }}">
-    <script type="text/javascript">
-      window.location.href = "{{ url_current_year }}"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPIC Datasets & Benchmarks</title>
+    <meta name="description" content="Egocentric Datasets & Benchmarks from the EPIC team.">
+    <meta name="theme-color" content="#0F1219">
+    <link rel="icon" type="image/x-icon" href="static/img/favicons/favicon.ico">
+    <link href="landing_static/css/style.css" rel="stylesheet">
+</head>
+<body class="selection:bg-blue-500 selection:text-white">
+
+    <div id="animation-layer">
+        <div class="optical-mesh"></div>
+
+        <svg class="motion-svg" id="path-container" overflow="visible">
+            <defs>
+                <mask id="snake-mask">
+                    <path id="mask-path" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" />
+                </mask>
+            </defs>
+            <path id="visible-line" class="dashed-line" mask="url(#snake-mask)" />
+        </svg>
+
+        <i id="cam-icon" class="ph-fill ph-video-camera bg-symbol cam-tracker" aria-hidden="true"></i>
+
+        <i class="ph-fill ph-knife bg-symbol kitchen-item flow-right pos-knife" aria-hidden="true"></i>
+        <i class="ph-fill ph-chef-hat bg-symbol kitchen-item flow-right pos-hat" aria-hidden="true"></i>
+        <i class="ph-fill ph-carrot bg-symbol kitchen-item flow-right pos-carrot" aria-hidden="true"></i>
+        <i class="ph-fill ph-fish bg-symbol kitchen-item flow-right pos-fish" aria-hidden="true"></i>
+        <i class="ph-fill ph-hamburger bg-symbol kitchen-item flow-right pos-burger" aria-hidden="true"></i>
+        <i class="ph-fill ph-cooking-pot bg-symbol kitchen-item flow-left pos-pot" aria-hidden="true"></i>
+        <i class="ph-fill ph-pizza bg-symbol kitchen-item flow-left pos-pizza" aria-hidden="true"></i>
+        <i class="ph-fill ph-frying-pan bg-symbol kitchen-item flow-left pos-pan" aria-hidden="true"></i>
+        <i class="ph-fill ph-egg bg-symbol kitchen-item flow-left pos-egg" aria-hidden="true"></i>
+        <i class="ph-fill ph-fork bg-symbol kitchen-item flow-left pos-fork" aria-hidden="true"></i>
+        <i class="ph-fill ph-wine bg-symbol kitchen-item flow-up pos-wine" aria-hidden="true"></i>
+        <i class="ph-fill ph-coffee bg-symbol kitchen-item flow-up pos-coffee" aria-hidden="true"></i>
+        <i class="ph-fill ph-cookie bg-symbol kitchen-item flow-up pos-cookie" aria-hidden="true"></i>
+        <i class="ph-fill ph-bread bg-symbol kitchen-item flow-up pos-bread" aria-hidden="true"></i>
+        <i class="ph-fill ph-cheese bg-symbol kitchen-item flow-up pos-cheese" aria-hidden="true"></i>
+        <i class="ph-fill ph-bowl-food bg-symbol kitchen-item flow-up pos-bowl" aria-hidden="true"></i>
+        <i class="ph-fill ph-ice-cream bg-symbol kitchen-item flow-up pos-icecream" aria-hidden="true"></i>
+    </div>
+    
+    <div class="video-overlay"></div>
+
+    <nav class="w-full py-4 px-4 md:py-6 md:px-12 flex flex-wrap justify-between items-center z-50">
+        <div class="flex items-center gap-3 md:gap-5">
+            <a href="https://epic-kitchens.github.io/site/" class="hover:opacity-80 transition-opacity block">
+                <img src="landing_static/media/epic-kitchens-logo.png" width="100" height="32" alt="EPIC Datasets" class="h-6 md:h-8 w-auto">
+            </a>
+            <span class="text-white text-2xl md:text-3xl font-light opacity-30 select-none pb-1" aria-hidden="true">+</span>
+            <a href="https://hd-epic.github.io/site/" class="hover:opacity-80 transition-opacity block">
+                <img src="landing_static/media/hd_epic_logo.png" width="100" height="45" alt="HD-EPIC" class="h-8 md:h-[45px] w-auto">
+            </a>
+        </div>
+        <div class="hidden md:block text-sm text-slate-500 font-medium tracking-wide">Egocentric Datasets & Benchmarks</div>
+    </nav>
+
+    <main class="max-w-[1400px] mx-auto px-4 md:px-12 pb-24">
+        <header class="mb-10 md:mb-16 mt-4 md:mt-8">
+            <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4">
+                <span class="w-fit px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider">New</span>
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Landing Page</h1>
+            </div>
+            <p class="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed">
+                We added a landing page to all available datasets allowing you to explore annotations and datasets available from our team. Interact with any of the cards to navigate to the corresponding dataset!
+            </p>
+        </header>
+
+        <fieldset class="ecosystem-container">
+            <legend class="ecosystem-label">
+                <i class="ph-fill ph-tree-structure"></i> Connected Datasets
+            </legend>
+
+            <div class="w-full mb-6 lg:mb-0">
+                <a href="https://epic-kitchens.github.io/site/" target="_blank" rel="noopener noreferrer" class="w-full bento-card bento-card-horizontal group cursor-pointer ring-1 ring-blue-500/20 hover:ring-blue-500/50">
+                    <div class="info-pane info-pane-horizontal w-full lg:w-7/12 order-2 lg:order-1">
+                        <div>
+                            <div class="mb-3 flex items-center gap-3">
+                                <span class="px-3 py-1 rounded bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider">Core Data</span>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">ECCV 2018</span>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">TPAMI 2021</span>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">IJCV 2022</span>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold mb-3">EPIC-KITCHENS-100</h2>
+                            <p class="text-slate-300 text-xs md:text-sm leading-relaxed max-w-lg mb-6">
+                                100 hours of unscripted egocentric footage from 45 kitchens. The foundation for all subsequent datasets.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                            <div class="stat-pill"><span class="stat-pill-value">100</span><span class="stat-pill-label">Hours</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">20M</span><span class="stat-pill-label">Frames</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">89.9K</span><span class="stat-pill-label">Actions</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">700</span><span class="stat-pill-label">Videos</span></div>
+                            
+                            <div class="stat-pill"><span class="stat-pill-value">45</span><span class="stat-pill-label">Kitchens</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">65.6M</span><span class="stat-pill-label">Masks</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">20.5K</span><span class="stat-pill-label">Narrations</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">4.0K</span><span class="stat-pill-label">Action Classes</span></div>
+                        </div>
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-[9px] uppercase tracking-wider text-slate-400 border border-white/10 px-2 py-1 rounded">Action Recognition</span>
+                            <span class="text-[9px] uppercase tracking-wider text-slate-400 border border-white/10 px-2 py-1 rounded">Detection</span>
+                            <span class="text-[9px] uppercase tracking-wider text-slate-400 border border-white/10 px-2 py-1 rounded">Anticipation</span>
+                            <span class="text-[9px] uppercase tracking-wider text-slate-400 border border-white/10 px-2 py-1 rounded">Domain Adaptation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="data-viewport data-viewport-horizontal w-full lg:w-5/12 order-1 lg:order-2 lg:border-l border-white/5 bg-black min-h-[250px]">
+                        <div class="viewport-badge text-teal-200 border-teal-500/30 bg-blue-600/60"><i class="ph-fill ph-video-camera"></i> RGB Videos</div>
+                        <video muted loop playsinline class="data-video" poster="landing_static/media/epic_kitchens_videowall.png" width="600" height="400" preload="auto" fetchpriority="high">
+                            <source src="landing_static/media/videos/epic_kitchens_videowall.webm" type="video/webm">
+                            <source src="landing_static/media/videos/epic_kitchens_videowall.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hierarchy-connector theme-epic">
+                <div class="branch-node">Derived Datasets</div>
+                <svg class="connector-svg" preserveAspectRatio="none" viewBox="0 0 100 40">
+                    <defs>
+                        <linearGradient id="grad-visor" gradientUnits="userSpaceOnUse" x1="50" y1="20" x2="16.6" y2="20">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="var(--color-teal-400)"/>
+                        </linearGradient>
+
+                        <linearGradient id="grad-fields" gradientUnits="userSpaceOnUse" x1="50" y1="20" x2="83.3" y2="20">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="var(--color-orange-400)"/>
+                        </linearGradient>
+
+                        <linearGradient id="grad-sounds" gradientUnits="userSpaceOnUse" x1="50" y1="40" x2="50" y2="50">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="var(--color-purple-400)"/>
+                        </linearGradient>
+                    </defs>
+
+                    <path class="tree-path" d="M 50 0 L 50 30" style="stroke: rgba(59, 130, 246, 0.4);" />
+
+                    <path class="tree-path" d="M 50 30 L 16.6 30 L 16.6 80" style="stroke: url(#grad-visor)" />
+
+                    <path class="tree-path" d="M 50 30 L 83.3 30 L 83.3 80" style="stroke: url(#grad-fields)" />
+
+                    <path class="tree-path" d="M 50 40 L 50 80" style="stroke: url(#grad-sounds)" />
+                </svg>
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full theme-epic">
+                <a href="https://epic-kitchens.github.io/VISOR/" target="_blank" rel="noopener noreferrer" class="bento-card flex-col group cursor-pointer hover:border-teal-500/30">
+                    <div class="data-viewport h-[200px] w-full border-b border-white/5">
+                        <div class="viewport-badge text-teal-200 border-teal-500/30 bg-teal-900/60"><i class="ph-fill ph-polygon"></i> Segmentation Masks</div>
+                        <video muted loop playsinline class="data-video" poster="landing_static/media/visor_videowall.png" width="400" height="200" preload="none">
+                            <source src="landing_static/media/videos/visor_videowall.webm" type="video/webm">
+                            <source src="landing_static/media/videos/visor_videowall.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="info-pane h-auto flex-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="text-lg font-bold flex items-center gap-2"><span class="text-teal-400">VISOR</span></h3>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">NeurIPS 2022</span>
+                            </div>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                                Pixel-wise segmentation of hands and active objects, featuring dense interpolations and contact relations.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-2 mt-auto">
+                            <div class="stat-pill"><span class="stat-pill-value">271K</span><span class="stat-pill-label">Manual Masks</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">9.9M</span><span class="stat-pill-label">Dense Masks</span></div>
+                            
+                            <div class="stat-pill"><span class="stat-pill-value">257</span><span class="stat-pill-label">Objects</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">67K</span><span class="stat-pill-label">Hand Relations</span></div>
+                        </div>
+
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-teal-300/80 border border-teal-500/20 px-2 py-1 rounded">VOS</span>
+                            <span class="text-[9px] uppercase tracking-wider text-teal-300/80 border border-teal-500/20 px-2 py-1 rounded">HOS</span>
+                            <span class="text-[9px] uppercase tracking-wider text-teal-300/80 border border-teal-500/20 px-2 py-1 rounded">Long-Term</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://epic-kitchens.github.io/epic-sounds" target="_blank" rel="noopener noreferrer" class="bento-card flex-col group cursor-pointer hover:border-purple-500/30 relative">
+                    <div class="data-viewport h-[200px] w-full border-b border-white/5 relative">
+                        <div class="viewport-badge text-purple-200 border-purple-500/30 bg-purple-900/60"><i class="ph-fill ph-speaker-high"></i> Audio Annotations</div>
+                        
+                        <div class="absolute bottom-3 right-3 z-30 flex items-center gap-3">
+                            
+                            <div class="audio-hint pointer-events-none bg-black/60 backdrop-blur-md border border-white/10 rounded px-2 py-1 flex items-center gap-1.5">
+                                <span class="text-[9px] font-bold text-white uppercase tracking-wider">Unmute Here</span>
+                                <i class="ph-bold ph-arrow-right text-white text-xs"></i>
+                            </div>
+
+                            <div class="volume-btn bg-black/60 backdrop-blur-md border border-white/10 rounded-full p-2.5 hover:bg-white/20 transition-all cursor-pointer flex items-center justify-center shadow-lg active:scale-95">
+                                <i class="vol-icon ph-fill ph-speaker-slash text-white text-lg"></i>
+                            </div>
+                        </div>
+
+                        <video muted loop playsinline class="data-video" poster="landing_static/media/epic_sounds.png" width="400" height="200" preload="none">
+                            <source src="landing_static/media/videos/epic_sounds.webm" type="video/webm">
+                            <source src="landing_static/media/videos/epic_sounds.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    
+                    <div class="info-pane h-auto flex-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="text-lg font-bold flex items-center gap-2"><span class="text-purple-400">EPIC-Sounds</span></h3>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">ICASSP 2023</span>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">TPAMI 2025</span>
+                            </div>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                                117K temporal segments of "actions that sound". Distinguishes auditory events from visual events with material discrimination.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-2 mt-auto">
+                            <div class="stat-pill"><span class="stat-pill-value">117.5K</span><span class="stat-pill-label">Total Events</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">78.4K</span><span class="stat-pill-label">Categorised</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">39.2K</span><span class="stat-pill-label">Uncategorised</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">44</span><span class="stat-pill-label">Audio Classes</span></div>
+                        </div>
+
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-purple-300/80 border border-purple-500/20 px-2 py-1 rounded">Audio-Based Recognition</span>
+                            <span class="text-[9px] uppercase tracking-wider text-purple-300/80 border border-purple-500/20 px-2 py-1 rounded">Audio-Based Detection</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://epic-kitchens.github.io/epic-fields/" target="_blank" rel="noopener noreferrer" class="bento-card flex-col group cursor-pointer hover:border-orange-500/30">
+                    <div class="data-viewport h-[200px] w-full border-b border-white/5">
+                        <div class="viewport-badge text-orange-200 border-orange-500/30 bg-orange-900/60"><i class="ph-fill ph-cube"></i> 3D Reconstruction</div>
+                        <video muted loop playsinline class="data-video" poster="landing_static/media/epic_fields_videowall.png" width="400" height="200" preload="none">
+                            <source src="landing_static/media/videos/epic_fields_videowall.webm" type="video/webm">
+                            <source src="landing_static/media/videos/epic_fields_videowall.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="info-pane h-auto flex-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="text-lg font-bold flex items-center gap-2"><span class="text-orange-400">EPIC-Fields</span></h3>
+                                <span class="text-[9px] font-bold text-slate-500 border border-slate-700/50 px-2 py-0.5 rounded uppercase tracking-wider">NeurIPS 2023</span>
+                            </div>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                                3D camera information (extrinsics & intrinsics) for dynamic egocentric videos.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-2 mt-auto">
+                            <div class="stat-pill"><span class="stat-pill-value">18.7M</span><span class="stat-pill-label">Registered Frames</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">671</span><span class="stat-pill-label">Videos</span></div>
+                            
+                            <div class="stat-pill"><span class="stat-pill-value">96%</span><span class="stat-pill-label">Success Rate</span></div>
+                            <div class="stat-pill"><span class="stat-pill-value">45</span><span class="stat-pill-label">Kitchens</span></div>
+                        </div>
+
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-orange-300/80 border border-orange-500/20 px-2 py-1 rounded">Neural Rendering</span>
+                            <span class="text-[9px] uppercase tracking-wider text-orange-300/80 border border-orange-500/20 px-2 py-1 rounded">D-NVS</span>
+                            <span class="text-[9px] uppercase tracking-wider text-orange-300/80 border border-orange-500/20 px-2 py-1 rounded">UDOS</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </fieldset>
+
+        <div class="section-divider"></div>
+
+        <section id="hd-epic">
+            <a href="https://hd-epic.github.io/site/" target="_blank" rel="noopener noreferrer" class="w-full bento-card bento-card-horizontal group cursor-pointer border-slate-800 hover:border-indigo-500/50 transition-colors">
+                <div class="data-viewport data-viewport-horizontal w-full lg:w-5/12 min-h-[250px] lg:h-auto">
+                    <div class="viewport-badge bg-indigo-600 border-indigo-400 text-white"><i class="ph-bold ph-aperture"></i> Highly Detailed Annotations</div>
+                    <img src="landing_static/media/hd_epic_poster.png" data-gif="landing_static/media/hd_epic.gif" width="600" height="400" alt="HD-EPIC Preview" class="data-video gif-player" loading="eager" fetchpriority="high">
+                </div>
+                <div class="info-pane info-pane-horizontal w-full lg:w-7/12">
+                    <div class="flex justify-between items-start mb-4 md:mb-6">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <h2 class="text-2xl md:text-3xl font-bold">HD-EPIC</h2>
+                                
+                                <div class="flex items-center gap-2 px-2 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
+                                    </span>
+                                    <span class="text-[9px] font-bold text-blue-300 tracking-widest uppercase">New</span>
+                                </div>
+
+                                <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.25)]">
+                                    <span class="text-[9px] font-bold text-indigo-300 tracking-widest uppercase">CVPR 2025</span>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 text-xs md:text-sm max-w-md">
+                                41 hours of unscripted multi-day recordings with highly detailed and interconnected ground-truth labels, grounded in 3D through digital twins of each scene.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 mb-6">
+                        <div class="stat-pill"><span class="stat-pill-value">41</span><span class="stat-pill-label">Hours</span></div>
+                        <div class="stat-pill"><span class="stat-pill-value">4.4M</span><span class="stat-pill-label">Frames</span></div>
+                        <div class="stat-pill"><span class="stat-pill-value">69</span><span class="stat-pill-label">Recipes</span></div>
+                        <div class="stat-pill"><span class="stat-pill-value">558</span><span class="stat-pill-label">Ingredients</span></div>
+                        
+                        <div class="stat-pill"><span class="stat-pill-value">59.4K</span><span class="stat-pill-label">Actions</span></div>
+                        <div class="stat-pill"><span class="stat-pill-value">50.9K</span><span class="stat-pill-label">Audio Events</span></div>
+                        <div class="stat-pill"><span class="stat-pill-value">7.7M</span><span class="stat-pill-label">Hand Masks</span></div>
+                        <div class="stat-pill"><span class="stat-pill-value">19.9K</span><span class="stat-pill-label">Obj. Tracks</span></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                                <i class="ph-fill ph-question text-indigo-500 text-sm"></i> <span>"How" & "Why" Descriptions</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                                <i class="ph-fill ph-knife text-indigo-500 text-sm"></i> <span>Recipe Prep & Step Pairs</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                                <i class="ph-fill ph-eye text-indigo-500 text-sm"></i> <span>Gaze Priming</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                                <i class="ph-fill ph-cube text-indigo-500 text-sm"></i> <span>Digital Twins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-indigo-900/10 border border-indigo-500/10 rounded-lg p-3 flex items-center justify-between">
+                        <div>
+                            <div class="text-xs font-bold text-indigo-200">VQA Benchmark</div>
+                            <div class="text-[10px] text-indigo-400/70">7 Categories: Recipes, Ingredients, Nutrition, Fine-grained Actions, 3D Perception, Object Motion, and Gaze.</div>
+                        </div>
+                        <div class="text-right flex flex-col items-end">
+                            <div class="text-lg font-bold text-indigo-400 leading-none">26.6K</div>
+                            <div class="text-[9px] uppercase text-indigo-500 font-bold">Questions</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Helper to update UI based on mute state
+            const updateAudioUI = (wrapper, isMuted) => {
+                const icon = wrapper.querySelector('.vol-icon');
+                const hint = wrapper.querySelector('.audio-hint');
+
+                if (isMuted) {
+                    if(icon) icon.className = "vol-icon ph-fill ph-speaker-slash text-white text-lg";
+                    if(hint) hint.style.opacity = '1'; 
+                } else {
+                    if(icon) icon.className = "vol-icon ph-fill ph-speaker-high text-purple-400 text-lg";
+                    if(hint) hint.style.opacity = '0'; 
+                }
+            };
+
+            // ==========================================
+            // AUDIO BUTTON LOGIC
+            // ==========================================
+            document.querySelectorAll('.volume-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    e.stopPropagation();
+
+                    const wrapper = btn.closest('.data-viewport');
+                    const video = wrapper.querySelector('video');
+
+                    if (video) {
+                        video.muted = !video.muted;
+                        updateAudioUI(wrapper, video.muted);
+                    }
+                });
+            });
+
+            // ==========================================
+            // DESKTOP HOVER LOGIC
+            // ==========================================
+            if (!isTouch) {
+                document.querySelectorAll('.bento-card').forEach(card => {
+                    const video = card.querySelector('video');
+                    const gifImage = card.querySelector('.gif-player');
+                    const wrapper = card.querySelector('.data-viewport');
+
+                    if (video) {
+                        video.style.pointerEvents = 'none'; 
+                        
+                        card.addEventListener('mouseenter', () => {
+                            const playPromise = video.play();
+                            if (playPromise !== undefined) playPromise.catch(() => {});
+                        }, { passive: true });
+
+                        card.addEventListener('mouseleave', () => {
+                            video.pause();
+                            // RESET TO MUTED STATE
+                            video.muted = true;
+                            if (wrapper) updateAudioUI(wrapper, true);
+                        }, { passive: true });
+                    }
+
+                    if (gifImage) {
+                        const staticSrc = gifImage.src;
+                        const animatedSrc = gifImage.getAttribute('data-gif');
+                        card.addEventListener('mouseenter', () => {
+                            if (card.classList.contains('in-view') && animatedSrc) gifImage.src = animatedSrc;
+                        }, { passive: true });
+                        card.addEventListener('mouseleave', () => {
+                            if (staticSrc) gifImage.src = staticSrc;
+                        }, { passive: true });
+                    }
+                });
+            }
+
+            // ==========================================
+            // VIEWPORT OBSERVER (Loading & Mobile Auto-Play)
+            // ==========================================
+            const observerOptions = { 
+                root: null, 
+                rootMargin: '50% 0px 50% 0px', 
+                threshold: isTouch ? 0.5 : 0 
+            };
+            
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const card = entry.target;
+                    const video = card.querySelector('video');
+                    const gifImage = card.querySelector('.gif-player');
+                    
+                    if (entry.isIntersecting) {
+                        card.classList.add('in-view');
+                        
+                        if (video && video.preload !== 'auto') {
+                            video.preload = 'auto';
+                        }
+
+                        // Mobile: Autoplay Muted
+                        if (isTouch && video && video.paused) {
+                            if(!video.muted) video.muted = true; 
+                            const p = video.play();
+                            if(p) p.catch(() => {});
+                        }
+                        
+                        if (gifImage) {
+                            const animatedSrc = gifImage.getAttribute('data-gif');
+                            if (animatedSrc && !gifImage.src.includes(animatedSrc)) {
+                                gifImage.src = animatedSrc;
+                            }
+                        }
+                    } else {
+                        card.classList.remove('in-view');
+                        
+                        // Mobile: Pause on Scroll Out
+                        if (isTouch && video && !video.paused) {
+                            video.pause();
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.bento-card').forEach(card => videoObserver.observe(card));
+
+            // ==========================================
+            // BACKGROUND ANIMATION
+            // ==========================================
+            if (!prefersReducedMotion) {
+                const itemSettings = {
+                    'pos-knife':   { d: 25000, s: -5000 },
+                    'pos-hat':     { d: 50000, s: -20000 },
+                    'pos-carrot':  { d: 20000, s: -15000 },
+                    'pos-fish':    { d: 25000, s: -10000 },
+                    'pos-burger':  { d: 20000, s: -2000 },
+                    'pos-pot':     { d: 50000, s: -8000 },
+                    'pos-pizza':   { d: 25000, s: -18000 },
+                    'pos-pan':     { d: 50000, s: -12000 },
+                    'pos-egg':     { d: 20000, s: -5000 },
+                    'pos-fork':    { d: 25000, s: -22000 },
+                    'pos-wine':    { d: 20000, s: -10000 },
+                    'pos-coffee':  { d: 25000, s: -3000 },
+                    'pos-bowl':    { d: 20000, s: -5000 },
+                    'pos-cookie':  { d: 25000, s: -15000 },
+                    'pos-icecream':{ d: 20000, s: -2000 },
+                    'pos-bread':   { d: 25000, s: -8000 },
+                    'pos-cheese':  { d: 20000, s: -10000 }
+                };
+
+                document.querySelectorAll('.kitchen-item').forEach(el => {
+                    const cls = Array.from(el.classList).find(c => itemSettings[c]);
+                    const settings = cls ? itemSettings[cls] : { d: 20000, s: 0 };
+                    el.style.setProperty('--duration', `${settings.d}ms`);
+                    el.style.setProperty('--delay', `${settings.s}ms`);
+                    
+                    if (el.classList.contains('flow-right')) el.classList.add('anim-right');
+                    else if (el.classList.contains('flow-left')) el.classList.add('anim-left');
+                    else if (el.classList.contains('flow-up')) el.classList.add('anim-up');
+                });
+
+                // Camera Path Animation
+                const cam = document.getElementById('cam-icon');
+                const maskPath = document.getElementById('mask-path');
+                const visibleLine = document.getElementById('visible-line');
+                
+                if (cam && maskPath && visibleLine) {
+                    const normalizedPaths = [
+                        { s: {x: -0.041, y: 0.555}, c1: {x: 0.156, y: 0.092}, c2: {x: 0.416, y: -0.092}, e: {x: 1.041, y: 0.555} },
+                        { s: {x: -0.041, y: 0.277}, c1: {x: 0.260, y: 0.740}, c2: {x: 0.781, y: 0.740}, e: {x: 1.041, y: 0.370} },
+                        { s: {x: -0.041, y: 0.462}, c1: {x: 0.312, y: 0.000}, c2: {x: 0.625, y: 1.000}, e: {x: 1.041, y: 0.462} },
+                        { s: {x: -0.041, y: 0.740}, c1: {x: 0.208, y: 0.555}, c2: {x: 0.833, y: 0.370}, e: {x: 1.041, y: 0.185} },
+                        { s: {x: -0.041, y: 0.370}, c1: {x: 0.416, y: -0.185}, c2: {x: 0.729, y: 0.833}, e: {x: 1.250, y: 0.462} }
+                    ];
+
+                    const BASE_DURATION = 20000;
+                    let currentPathIndex = 0;
+                    let pathStartTime = null;       
+                    let camDuration = 0;
+                    let lineDuration = 0;
+                    let startOffset = 0;
+                    let endOffset = 0;
+                    
+                    let winW = window.innerWidth;
+                    let winH = window.innerHeight;
+
+                    const updateCurrentPathGeometry = () => {
+                        const n = normalizedPaths[currentPathIndex];
+                        const scaleY = winW < 768 ? winH * 0.7 : winH; 
+                        const offsetY = winW < 768 ? winH * 0.15 : 0;
+
+                        const pathString = `M ${n.s.x * winW} ${(n.s.y * scaleY) + offsetY} ` +
+                                           `C ${n.c1.x * winW} ${(n.c1.y * scaleY) + offsetY}, ` +
+                                           `${n.c2.x * winW} ${(n.c2.y * scaleY) + offsetY}, ` +
+                                           `${n.e.x * winW} ${(n.e.y * scaleY) + offsetY}`;
+
+                        maskPath.setAttribute('d', pathString);
+                        visibleLine.setAttribute('d', pathString);
+                        cam.style.offsetPath = `path('${pathString}')`;
+
+                        const length = visibleLine.getTotalLength();
+                        const snakeRatio = winW < 768 ? 0.25 : 0.35;
+                        const snakeLength = length * snakeRatio;
+                        
+                        startOffset = snakeLength;       
+                        endOffset = -length;             
+
+                        const lineDistance = startOffset - endOffset;
+                        camDuration = BASE_DURATION;
+                        lineDuration = BASE_DURATION * (lineDistance / length);
+
+                        maskPath.style.strokeDasharray = `${snakeLength} ${length}`;
+                    };
+
+                    updateCurrentPathGeometry();
+                    window.addEventListener('resize', debounce(() => {
+                        winW = window.innerWidth;
+                        winH = window.innerHeight;
+                        updateCurrentPathGeometry();
+                    }, 150), { passive: true });
+
+                    const switchPath = () => {
+                        currentPathIndex = (currentPathIndex + 1) % normalizedPaths.length;
+                        updateCurrentPathGeometry();
+                        maskPath.style.strokeDashoffset = startOffset;
+                        cam.style.offsetDistance = '0%';
+                    };
+
+                    let isTabActive = true;
+                    document.addEventListener('visibilitychange', () => {
+                        isTabActive = !document.hidden;
+                        if(isTabActive) {
+                            pathStartTime = null; 
+                            requestAnimationFrame(tick);
+                        }
+                    });
+
+                    const tick = (timestamp) => {
+                        if (!isTabActive) return;
+
+                        if (pathStartTime === null) pathStartTime = timestamp;
+                        const elapsed = timestamp - pathStartTime;
+                        
+                        let lineProgress = elapsed / lineDuration;
+
+                        if (lineProgress < 1) {
+                            const currentDash = startOffset + (endOffset - startOffset) * lineProgress;
+                            maskPath.style.strokeDashoffset = currentDash;
+                            
+                            let camProgress = Math.min(elapsed / camDuration, 1);
+                            cam.style.offsetDistance = `${camProgress * 100}%`;
+                            
+                            requestAnimationFrame(tick);
+                        } else {
+                            switchPath();
+                            pathStartTime = timestamp;
+                            requestAnimationFrame(tick);
+                        }
+                    };
+
+                    requestAnimationFrame(tick);
+                }
+            }
+        });
     </script>
-    <title>Redirecting to EPIC Kitchens {{ site.year }}</title>
-  </head>
-  <body>
-    If you are not redirected automatically, follow this 
-    <a href="{{ url_current_year }}">EPIC Kitchens {{ site.year }}</a>.
-  </body>
+</body>
 </html>
