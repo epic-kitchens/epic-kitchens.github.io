@@ -23,7 +23,7 @@ layout: default
         <h2 class="section-heading text-uppercase">News</h2>
         <h5 class="text-muted" style="text-align:left;">
           <ul>
-              <li>Mar 2025: We released a *new* large-scale highly-detailed validataion dataset: <a href="http://hd-epic.github.io">HD-EPIC (CVPR 2025 paper)</a></li>
+              <li>Mar 2025: We released a *new* large-scale highly-detailed validataion dataset: <a href="http://hd-epic.github.io/site">HD-EPIC (CVPR 2025 paper)</a></li>
               <li>Jan 2025: Leaderboards Open for the 2025 Challenge</li>
               <li>Jan 2025: EPIC-KITCHENS challenges will be part of the <a href="https://egovis.github.io/cvpr25/">second EgoVis board at CVPR in Nashville this June</a></li>         
           </ul>
@@ -178,9 +178,9 @@ layout: default
           
         <p>All action segment annotations (Train/Val/Test) for all challenges are available at <a href="https://github.com/epic-kitchens/epic-kitchens-100-annotations">EPIC-KITCHENS-100-annotations repo</a></p>
           
-        <p>All masks/segmentation annotations are available from <a href="https://epic-kitchens.github.io/VISOR/#downloads">VISOR webpage</a></p>
+        <p>All masks/segmentation annotations are available from <a href="https://epic-kitchens.github.io/VISOR/site/#downloads">VISOR webpage</a></p>
           
-        <p>Audio-only annotations are available from <a href="https://epic-kitchens.github.io/epic-sounds/#downloads">EPIC-SOUNDS webpage</a></p>
+        <p>Audio-only annotations are available from <a href="https://epic-kitchens.github.io/epic-sounds/site/#downloads">EPIC-SOUNDS webpage</a></p>
           
         <p>Code to visualise and utilise automatic annotations is available for both <a href="https://github.com/epic-kitchens/epic-kitchens-100-object-masks">object masks</a> and <a href="https://github.com/epic-kitchens/epic-kitchens-100-hand-object-bboxes">hand-object detections</a>.</p>
           
@@ -282,7 +282,7 @@ layout: default
               <li><a href="#challenge-action-retrieval">Multi-Instance Retrieval</a></li>
           </ul>
         
-      <b>Also we have the <a href="https://hd-epic.github.io/index#vqa-benchmark">HD-EPIC VQA Challenge</a></b>
+      <b>Also we have the <a href="https://hd-epic.github.io/site#vqa-benchmark">HD-EPIC VQA Challenge</a></b>
 
         <h4 class="subheading">EPIC-Kitchens 2025 Challenges</h4>
         <div class="row">
@@ -334,7 +334,7 @@ layout: default
       <div class="col-md-12">
         <h4 class="subheading">Challenges Guidelines</h4>
         <p>The <b>eight</b> challenges below and their test sets and evaluation servers are available via Codabench. The leaderboards will decide the winners for each individual challenge. For each challenge, the Codabench server page details submission format and evaluation metrics. </p>
-          <p>This year, we offer <b>four</b> new challenges in: Semi-Supervised Video Object Segmentation using the <a href="http://epic-kitchens.github.io/VISOR/">VISOR</a> annotations, Hand-object-segmentations using the <a href="http://epic-kitchens.github.io/VISOR/">VISOR</a> annotations, single-object tracking and audio-based action recognition using the <a href="https://epic-kitchens.github.io/epic-sounds/">epic-sounds</a> dataset.</p>
+          <p>This year, we offer <b>four</b> new challenges in: Semi-Supervised Video Object Segmentation using the <a href="http://epic-kitchens.github.io/VISOR/site">VISOR</a> annotations, Hand-object-segmentations using the <a href="http://epic-kitchens.github.io/VISOR/site">VISOR</a> annotations, single-object tracking and audio-based action recognition using the <a href="https://epic-kitchens.github.io/epic-sounds/site">EPIC-SOUNDS</a> dataset.</p>
           <p>To <b>enter any of the nine competitions</b>, you need to register an account for that challenge using a valid institute (university/company) email address. To enable your account, <a href="https://forms.office.com/r/u3Hjpvb5Ks">fill this form with your team's details</a>. A single registration per research team is allowed. We perform a manual check for each submission, and expect to accept registrations within 2 working days.</p>
           <p>For all challenges, the maximum submissions per day is limited to 1, and the overall maximum number of submissions per team is limited to 50 overall, submitted once a day. This includes any failed submissions due to formats - please do not contact us to ask for increasing this limit.</p>
           <p>To <b>submit</b> your results, follow the JSON submission format, upload your results and give time for the evaluation to complete (in the order of several minutes). <b>Note our new rules on declaring the supervision level, given our proposed scale, for each submission.</b> After the evaluation is complete, the results automatically appear on the public leaderboards but you are allowed to withdraw these at any point in time.</p>
@@ -402,7 +402,7 @@ layout: default
             <div class="col-md-12">
               <h5 class="subheading">Semi-Supervised Video Object Segmentation</h5>
               <p class="text-muted">
-                This challenge uses the newly published <a href="http://epic-kitchens.github.io/VISOR/">VISOR annotations</a>.<br/>
+                This challenge uses the newly published <a href="http://epic-kitchens.github.io/VISOR/site">VISOR annotations</a>.<br/>
                   <b>Task. </b> 
                 Given a sub-sequence of frames with M object masks in the first frame, the goal is to segment these through the remaining frames. Other objects not present in the first frame of the sub-sequence are excluded from this benchmark. Note that any of the M objects can be occluded or out of view, and can reappear during the subsequene.             
               </p>
@@ -556,7 +556,7 @@ layout: default
             <div class="col-md-12">
               <h5 class="subheading">EPIC-SOUNDS: Audio-Based Interaction Recognition</h5>
               <p class="text-muted">
-                <b>Task. </b> Assign an audio-class label to a trimmed segment, indicating the class of interaction taking place in the video. This uses the <a href="http://epic-kitchens.github.io/epic-sounds/">EPIC-SOUNDS</a> dataset annotations. <br/>
+                <b>Task. </b> Assign an audio-class label to a trimmed segment, indicating the class of interaction taking place in the video. This uses the <a href="http://epic-kitchens.github.io/epic-sounds/site">EPIC-SOUNDS</a> dataset annotations. <br/>
                 <b>Training input. </b> A set of trimmed audio segments, each annotated with one of 44 class labels.  <br/>                
                 <b>Testing input. </b> A set of trimmed unlabelled audio segments. <br/>
                 <b>Splits. </b> Train/Val/Test splits are available
@@ -609,7 +609,7 @@ layout: default
             <div class="col-md-12">
               <h5 class="subheading">EPIC-SOUNDS: Audio-Based Interaction <b>Detection</b></h5>
               <p class="text-muted">
-                <b>Task. </b> Given an untrimmed video, find all temporal segments that indicate an interaction event and assign these a label. This challenge uses the <a href="http://epic-kitchens.github.io/epic-sounds/">EPIC-SOUNDS</a> dataset annotations. <br/>
+                <b>Task. </b> Given an untrimmed video, find all temporal segments that indicate an interaction event and assign these a label. This challenge uses the <a href="http://epic-kitchens.github.io/epic-sounds/site">EPIC-SOUNDS</a> dataset annotations. <br/>
                 <b>Training input. </b> A set of untrimmed videos, each video annotated with a number of, potentially overlapping, start-end times and a label out of 44 class labels.  <br/>                
                 <b>Testing input. </b> A set of untrimmed videos. <br/>
                 <b>Splits. </b> Train (shared with recognition) /Val (shared with recognition) /Test (distinct from recognition) splits are available
